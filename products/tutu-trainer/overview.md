@@ -69,38 +69,38 @@ TutuTrainer is not a single-model trainer. It is a general AI training platform 
 
 ### Image Generation Models
 
-| Model Family              | Supported Versions | VRAM Guidance | Notes                                      |
-| ------------------------- | ------------------ | ------------- | ------------------------------------------ |
-| Anima                     | Base               | 8 GB          | Lightweight image generation workflow      |
-| ERNIE-Image               | Base               | 24 GB         | ERNIE image generation                     |
-| FLUX.1                    | Dev                | 24 GB         | High-end image generation                  |
-| FLUX.2 [Klein] 4B Base    | 4B Base            | 16 GB         | FLUX.2 Klein image generation              |
-| FLUX.2 [Klein] 9B Base    | 9B Base            | 24 GB         | Larger FLUX.2 Klein image generation       |
-| Qwen-Image                | Base               | 24 GB         | Qwen image generation                      |
-| Qwen-Image-2512           | 2512               | 32 GB         | Newer Qwen image generation workflow       |
-| SD 1.5                    | Full series        | 8 GB          | Classic lightweight Stable Diffusion       |
-| SDXL                      | Base 1.0           | 16 GB         | High-quality Stable Diffusion XL           |
-| Z-Image                   | Base               | 24 GB         | Z-Image base model workflow                |
-| Z-Image De-Turbo          | De-Turbo           | 24 GB         | De-Turbo Z-Image workflow                  |
+| Model Family            | Supported Versions | VRAM Guidance | Notes                                 |
+| ----------------------- | ------------------ | ------------- | ------------------------------------- |
+| Anima                   | Base               | 8 GB          | Lightweight image generation workflow |
+| ERNIE-Image             | Base               | 24 GB         | ERNIE image generation                |
+| FLUX.1                  | Dev                | 24 GB         | High-end image generation             |
+| FLUX.2 \[Klein] 4B Base | 4B Base            | 16 GB         | FLUX.2 Klein image generation         |
+| FLUX.2 \[Klein] 9B Base | 9B Base            | 24 GB         | Larger FLUX.2 Klein image generation  |
+| Qwen-Image              | Base               | 24 GB         | Qwen image generation                 |
+| Qwen-Image-2512         | 2512               | 32 GB         | Newer Qwen image generation workflow  |
+| SD 1.5                  | Full series        | 8 GB          | Classic lightweight Stable Diffusion  |
+| SDXL                    | Base 1.0           | 16 GB         | High-quality Stable Diffusion XL      |
+| Z-Image                 | Base               | 24 GB         | Z-Image base model workflow           |
+| Z-Image De-Turbo        | De-Turbo           | 24 GB         | De-Turbo Z-Image workflow             |
 
 ### Video Generation Models
 
-| Model Family           | Supported Versions | VRAM Guidance | Notes                                      |
-| ---------------------- | ------------------ | ------------- | ------------------------------------------ |
-| LTX-2 (Video+Audio)    | LTX-2              | 32 GB         | Video and audio training workflow          |
-| LTX-2.3 (Video+Audio)  | LTX-2.3            | 32 GB         | Newer video and audio training workflow    |
-| Wan 2.2 I2V (14B)      | 14B                | 24 GB         | Image-to-video training workflow           |
-| Wan 2.2 T2V (14B)      | 14B                | 24 GB         | Text-to-video training workflow            |
-| Wan 2.2 TI2V (5B)      | 5B                 | 16 GB         | Lighter text/image-to-video workflow       |
+| Model Family          | Supported Versions | VRAM Guidance | Notes                                   |
+| --------------------- | ------------------ | ------------- | --------------------------------------- |
+| LTX-2 (Video+Audio)   | LTX-2              | 32 GB         | Video and audio training workflow       |
+| LTX-2.3 (Video+Audio) | LTX-2.3            | 32 GB         | Newer video and audio training workflow |
+| Wan 2.2 I2V (14B)     | 14B                | 24 GB         | Image-to-video training workflow        |
+| Wan 2.2 T2V (14B)     | 14B                | 24 GB         | Text-to-video training workflow         |
+| Wan 2.2 TI2V (5B)     | 5B                 | 16 GB         | Lighter text/image-to-video workflow    |
 
 ### Instruction and Editing Models
 
-| Model Family          | Supported Versions | VRAM Guidance | Notes                                   |
-| --------------------- | ------------------ | ------------- | --------------------------------------- |
-| FLUX.1-Kontext-dev    | Dev                | 24 GB         | Context-aware editing based on FLUX     |
-| Qwen-Image-Edit       | Original           | 32 GB         | Instruction-based image editing         |
-| Qwen-Image-Edit-2509  | 2509               | 32 GB         | Qwen image-editing workflow             |
-| Qwen-Image-Edit-2511  | 2511               | 32 GB         | Newer Qwen image-editing workflow       |
+| Model Family         | Supported Versions | VRAM Guidance | Notes                               |
+| -------------------- | ------------------ | ------------- | ----------------------------------- |
+| FLUX.1-Kontext-dev   | Dev                | 24 GB         | Context-aware editing based on FLUX |
+| Qwen-Image-Edit      | Original           | 32 GB         | Instruction-based image editing     |
+| Qwen-Image-Edit-2509 | 2509               | 32 GB         | Qwen image-editing workflow         |
+| Qwen-Image-Edit-2511 | 2511               | 32 GB         | Newer Qwen image-editing workflow   |
 
 VRAM guidance is practical guidance for normal use, not a hard guarantee. Actual requirements can change with dataset size, resolution, selected precision, quantization, cache settings, and other running applications.
 
@@ -138,9 +138,9 @@ TutuTrainer's design is to let regular users choose the core training intent whi
 
 ## 4. Modern Graphical Interface
 
-![TutuTrainer dashboard](../../.gitbook/assets/overview-01.png)
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-### Training Dashboard
+Training Dashboard
 
 * Real-time training progress visualization.
 * GPU usage, VRAM usage, and temperature monitoring.
@@ -152,13 +152,9 @@ TutuTrainer's design is to let regular users choose the core training intent whi
 * Visual configuration editor.
 * Training task queue management.
 
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
 ### Smart File Management
-
-![Dataset management](../../.gitbook/assets/overview-02.png)
-
-![Model and dataset file view](../../.gitbook/assets/overview-03.png)
-
-![Dataset tools](../../.gitbook/assets/overview-04.png)
 
 * Automatic dataset scanning.
 * Image preview grid.
@@ -166,12 +162,16 @@ TutuTrainer's design is to let regular users choose the core training intent whi
 * Batch renaming tools.
 * Dataset quality checks.
 
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
 ### Training History
 
 * Training record archive.
 * Hyperparameter comparison.
 * Model version management.
 * Training log replay.
+
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 ### User Experience Details
 
@@ -190,7 +190,7 @@ TutuTrainer's design is to let regular users choose the core training intent whi
 
 TutuTrainer provides model resources and supports one-click cloud-drive downloads.
 
-![Built-in resource library](../../.gitbook/assets/overview-05.png)
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 ### Automatic Model Download
 
@@ -213,7 +213,7 @@ Verify integrity after download.
 
 ### Built-in Help
 
-![Built-in help](../../.gitbook/assets/overview-06.png)
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 * Hover tips for parameters.
 * Visual examples.
