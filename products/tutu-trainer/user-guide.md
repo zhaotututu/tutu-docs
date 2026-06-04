@@ -98,8 +98,6 @@ During training, watch the job progress, resource usage, samples, and logs.
 
 <figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
-
-
 When the run is complete:
 
 1. Open the model output area.
@@ -234,38 +232,38 @@ TutuTrainer supports image generation, image editing, and video training model a
 
 Image generation models:
 
-| Model architecture        | Practical VRAM guidance | Typical use                                  |
-| ------------------------- | ----------------------- | -------------------------------------------- |
-| Anima                     | 8 GB                    | Lightweight image generation training        |
-| ERNIE-Image               | 24 GB                   | ERNIE image generation training              |
-| FLUX.1                    | 24 GB                   | High-end image generation training           |
-| FLUX.2 [Klein] 4B Base    | 16 GB                   | Lighter FLUX.2 Klein training                |
-| FLUX.2 [Klein] 9B Base    | 24 GB                   | Larger FLUX.2 Klein training                 |
-| Qwen-Image                | 24 GB                   | Qwen image generation training               |
-| Qwen-Image-2512           | 32 GB                   | Newer Qwen image generation training         |
-| SD 1.5                    | 8 GB                    | Classic lightweight Stable Diffusion LoRA    |
-| SDXL                      | 16 GB                   | Stable Diffusion XL LoRA                     |
-| Z-Image                   | 24 GB                   | Z-Image base model training                  |
-| Z-Image De-Turbo          | 24 GB                   | Z-Image De-Turbo training                    |
+| Model architecture      | Practical VRAM guidance | Typical use                               |
+| ----------------------- | ----------------------- | ----------------------------------------- |
+| Anima                   | 8 GB                    | Lightweight image generation training     |
+| ERNIE-Image             | 24 GB                   | ERNIE image generation training           |
+| FLUX.1                  | 24 GB                   | High-end image generation training        |
+| FLUX.2 \[Klein] 4B Base | 16 GB                   | Lighter FLUX.2 Klein training             |
+| FLUX.2 \[Klein] 9B Base | 24 GB                   | Larger FLUX.2 Klein training              |
+| Qwen-Image              | 24 GB                   | Qwen image generation training            |
+| Qwen-Image-2512         | 32 GB                   | Newer Qwen image generation training      |
+| SD 1.5                  | 8 GB                    | Classic lightweight Stable Diffusion LoRA |
+| SDXL                    | 16 GB                   | Stable Diffusion XL LoRA                  |
+| Z-Image                 | 24 GB                   | Z-Image base model training               |
+| Z-Image De-Turbo        | 24 GB                   | Z-Image De-Turbo training                 |
 
 Image editing and instruction models:
 
-| Model architecture      | Practical VRAM guidance | Typical use                         |
-| ----------------------- | ----------------------- | ----------------------------------- |
-| FLUX.1-Kontext-dev      | 24 GB                   | Context-aware FLUX image editing    |
-| Qwen-Image-Edit         | 32 GB                   | Instruction-based image editing     |
-| Qwen-Image-Edit-2509    | 32 GB                   | Qwen image editing workflow         |
-| Qwen-Image-Edit-2511    | 32 GB                   | Newer Qwen image editing workflow   |
+| Model architecture   | Practical VRAM guidance | Typical use                       |
+| -------------------- | ----------------------- | --------------------------------- |
+| FLUX.1-Kontext-dev   | 24 GB                   | Context-aware FLUX image editing  |
+| Qwen-Image-Edit      | 32 GB                   | Instruction-based image editing   |
+| Qwen-Image-Edit-2509 | 32 GB                   | Qwen image editing workflow       |
+| Qwen-Image-Edit-2511 | 32 GB                   | Newer Qwen image editing workflow |
 
 Video and audio-capable models:
 
-| Model architecture      | Practical VRAM guidance | Typical use                              |
-| ----------------------- | ----------------------- | ---------------------------------------- |
-| LTX-2 (Video+Audio)     | 32 GB                   | Video and audio training workflow        |
-| LTX-2.3 (Video+Audio)   | 32 GB                   | Newer video and audio training workflow  |
-| Wan 2.2 I2V (14B)       | 24 GB                   | Image-to-video training                  |
-| Wan 2.2 T2V (14B)       | 24 GB                   | Text-to-video training                   |
-| Wan 2.2 TI2V (5B)       | 16 GB                   | Lighter text/image-to-video training     |
+| Model architecture    | Practical VRAM guidance | Typical use                             |
+| --------------------- | ----------------------- | --------------------------------------- |
+| LTX-2 (Video+Audio)   | 32 GB                   | Video and audio training workflow       |
+| LTX-2.3 (Video+Audio) | 32 GB                   | Newer video and audio training workflow |
+| Wan 2.2 I2V (14B)     | 24 GB                   | Image-to-video training                 |
+| Wan 2.2 T2V (14B)     | 24 GB                   | Text-to-video training                  |
+| Wan 2.2 TI2V (5B)     | 16 GB                   | Lighter text/image-to-video training    |
 
 The exact list in your app may change by version. Use the in-app model selector as the final source of truth.
 
@@ -737,7 +735,6 @@ Use the icons in the upper-right area of the app when available:
 
 If you need help, check the logs first, then contact the official support channel listed by Zhaotutu.
 
-Public contact information from the original Chinese guide:
-
-* QQ: 331506796
-* WeChat: tujiang0411
+* **Official website:** [https://zhaotutu.xyz/](https://zhaotutu.xyz/)
+* **YouTube:** [https://www.youtube.com/@zhaotutu/videos](https://www.youtube.com/@zhaotutu/videos)
+* **Telegram:** [https://t.me/zhaotutu](https://t.me/zhaotutu)
