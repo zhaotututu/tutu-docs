@@ -55,7 +55,19 @@ Use this section to run a first LoRA training job. Detailed explanations for eac
 
 ### Step 2: Prepare a Dataset
 
-1. Open Dataset Manager from the top navigation.
+Most users start with a prepared dataset. You can use either method:
+
+**Method A: Use an existing dataset folder**
+
+1. Open the dataset folder configured in path settings.
+2. Copy or move your prepared dataset folder into that dataset folder.
+3. Keep one folder per dataset.
+4. Make sure the images and matching `.txt` captions are inside that dataset folder.
+5. Return to TutuTrainer, open Dataset Management, and click refresh if the dataset does not appear.
+
+**Method B: Create a dataset in TutuTrainer**
+
+1. Open Dataset Management from the top navigation.
 2. Create a new dataset with a clear name.
 3. Enter the dataset detail page.
 4. Add image files to the dataset.
