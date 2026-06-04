@@ -6,52 +6,52 @@ Official website: https://zhaotutu.xyz
 
 ## Contents
 
-* [Download](user-guide.md#download)
+* [Install and First Launch](user-guide.md#install-and-first-launch)
 * [Quick Start](user-guide.md#quick-start)
-* [Auto Stop Timer](user-guide.md#auto-stop-timer)
-* [System Requirements](user-guide.md#system-requirements)
-* [Install and Start](user-guide.md#install-and-start)
+* [Hardware and Model Guidance](user-guide.md#hardware-and-model-guidance)
 * [Interface Overview](user-guide.md#interface-overview)
 * [Training Dashboard](user-guide.md#training-dashboard)
 * [Dataset Management](user-guide.md#dataset-management)
 * [Base Model Management](user-guide.md#base-model-management)
 * [FAQ](user-guide.md#faq)
-* [Best Practices](user-guide.md#best-practices)
+* [Practical Tips](user-guide.md#practical-tips)
 * [Appendix](user-guide.md#appendix)
 
-## Download
+## Install and First Launch
 
 Download the latest Windows installer from the official website:
 
 https://zhaotutu.xyz
 
-Open the website, go to the download area near the bottom of the page, and choose TutuTrainer.
+Use the official website or clearly announced official channels only. Avoid repackaged installers, modified scripts, and marketplace resales.
 
-Always use the official website or clearly announced official channels. Avoid repackaged installers, modified scripts, or marketplace resales.
+### Install
+
+1. Download the latest TutuTrainer installer.
+2. Run the installer.
+3. If Windows asks for WebView2 Runtime, install it.
+4. If Windows reports missing runtime DLL files, install the Microsoft Visual C++ Redistributable.
+5. Launch TutuTrainer after installation finishes.
+
+### First Launch
+
+1. Double-click the TutuTrainer shortcut or `TutuTrainer.exe`.
+2. Wait for the interface to load. First launch can take 30 to 60 seconds.
+3. Check the resource monitor area to confirm that your NVIDIA GPU is visible.
+4. Configure paths before starting the first training run.
 
 ## Quick Start
 
-You can start a first LoRA training run in a few minutes once your paths, dataset, and base model are ready.
+Use this section to run a first LoRA training job. Detailed explanations for each page are covered later in the guide.
 
 ### Step 1: Configure Paths
 
-1. Launch TutuTrainer from the desktop shortcut, Start menu, or installed `TutuTrainer.exe`.
-2. Open the training dashboard.
-3. Click the path settings button in the lower-right area of the dashboard.
-4. Configure the dataset folder, model folder, and training output folder.
-5. Save the path settings before creating or scanning datasets.
+1. Open the training dashboard.
+2. Click the path settings button in the lower-right area of the dashboard.
+3. Configure the dataset folder, model folder, and training output folder.
+4. Save the path settings.
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
-
-Recommended path roles:
-
-| Path                   | Purpose                                               |
-| ---------------------- | ----------------------------------------------------- |
-| Dataset folder         | Stores all image datasets used for training.          |
-| Model folder           | Stores downloaded, local, and configured base models. |
-| Training output folder | Stores LoRA files, samples, logs, and job outputs.    |
-
-If the UI cannot see your datasets or models, check these paths first. Most "not found" problems come from the app looking at a different root folder than the one you edited in File Explorer.
 
 ### Step 2: Prepare a Dataset
 
@@ -59,20 +59,11 @@ If the UI cannot see your datasets or models, check these paths first. Most "not
 2. Create a new dataset with a clear name.
 3. Enter the dataset detail page.
 4. Add image files to the dataset.
-5. Write or import a caption file for each image.
+5. Write or import captions for the images.
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-Each training image should have a matching caption. TutuTrainer saves captions as `.txt` files with the same base filename as the image.
-
-Example:
-
-```
-image001.jpg
-image001.txt
-```
-
-For batch captioning, use Intelligent Image & Video Prompt Reverse Engineer to generate and review captions before training.
+Each training image should have a matching `.txt` caption file. For batch captioning, use Tutu Super Smart Tagger to generate and review captions before training.
 
 ### Step 3: Configure and Start Training
 
@@ -88,7 +79,7 @@ TutuTrainer calculates recommended training settings automatically based on the 
 
 ### Step 4: Review Results
 
-During training, watch the job progress, resource usage, samples, and logs.
+During training, watch job progress, resource usage, samples, and logs.
 
 <figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
@@ -105,26 +96,9 @@ When the run is complete:
 3. Check the sample images and logs.
 4. Test several checkpoints in your target generation workflow.
 
-The final checkpoint is not always the best checkpoint. Test all saved checkpoints and choose the one that performs best for your target prompts.
+The final checkpoint is not always the best checkpoint. Keep multiple checkpoints and choose the one that performs best for your target prompts.
 
-## Auto Stop Timer
-
-TutuTrainer includes an auto stop timer for active training jobs. In the Active Projects area, open the **Auto Stop (hours)** menu and choose a preset duration such as 2, 4, 8, 12, or 24 hours. You can also enter a custom hour and minute value, then click **Set**.
-
-When the selected time limit is reached, TutuTrainer stops the training job automatically.
-
-This feature is designed for normal training workflows where the configured step count is often intentionally generous. A job does not always need to run all the way to the final step. In many cases, the best checkpoint may appear earlier, and continuing for too long can waste GPU time or overtrain the result.
-
-Use the timer when you want to:
-
-* Limit overnight or long training runs.
-* Stop a job after a fixed test window.
-* Avoid using more GPU time than needed.
-* Keep intermediate checkpoints while preventing the run from continuing indefinitely.
-
-After the timer stops a job, review the saved samples and checkpoints. The timer controls training duration; it does not automatically decide which checkpoint is best.
-
-## System Requirements
+## Hardware and Model Guidance
 
 TutuTrainer is a Windows desktop application for local or cloud GPU LoRA training.
 
@@ -139,96 +113,9 @@ TutuTrainer is a Windows desktop application for local or cloud GPU LoRA trainin
 | Storage          | 100 GB free space                  | 500 GB+ NVMe SSD                                      |
 | Driver           | NVIDIA driver 522.25 or newer      | Latest NVIDIA driver                                  |
 
-### VRAM and Memory Guidance by Model
-
-| Model family          | Approximate VRAM | Approximate system memory | Typical GPU guidance                   |
-| --------------------- | ---------------- | ------------------------- | -------------------------------------- |
-| SD 1.5                | About 10 GB      | Lower                     | RTX 3060 or better                     |
-| SDXL                  | About 16 GB      | About 16 GB               | RTX 4070 or better                     |
-| FLUX.1-dev            | About 32 GB      | 30 GB+                    | RTX 5090 class                         |
-| Qwen-Image            | About 32 GB      | 70 GB+                    | RTX 5090 class with high system memory |
-| Qwen-Image-Edit       | About 32 GB      | About 96 GB               | RTX 5090 class with high system memory |
-| Wan 2.2 5B (TI2V)     | About 16 GB      | About 64 GB               | RTX 4070 or better                     |
-| Wan 2.2 14B (T2V/I2V) | About 32 GB      | About 96 GB               | RTX 5090 or professional 24 GB+ GPU    |
-| FLUX Kontext          | About 32 GB      | About 50 GB               | RTX 5090 or professional 24 GB+ GPU    |
-| LTX 2                 | About 32 GB      | About 64 GB               | RTX 5090 class                         |
-| FLUX2 Klein 4B        | About 16 GB      | About 64 GB               | RTX 4070, RTX 4090, or RTX 5090        |
-| FLUX2 Klein 9B        | About 24 GB      | About 64 GB               | RTX 4090 or RTX 5090                   |
-| ERNIE-Image           | About 24 GB      | About 24 GB               | RTX 3090 or better                     |
-
-These numbers are practical guidance, not a strict guarantee. Dataset size, image resolution, model format, driver state, other running programs, and Windows virtual memory can all affect whether a job starts successfully.
-
-## Install and Start
-
-### Install
-
-1. Download the latest installer from the official website.
-2. Run the installer.
-3. If Windows asks for WebView2 Runtime, install it.
-4. If Windows reports missing runtime DLL files, install the Microsoft Visual C++ Redistributable.
-5. Launch TutuTrainer after installation finishes.
-
-### Start the App
-
-1. Double-click the TutuTrainer shortcut or `TutuTrainer.exe`.
-2. Wait for the interface to load. First launch can take 30 to 60 seconds.
-3. Check the resource monitor area to confirm the GPU is visible.
-4. Configure paths before starting the first training run.
-
-## Interface Overview
-
-TutuTrainer has three main working pages in the top navigation.
-
-### Training Dashboard
-
-This is the main page used for training.
-
-| Area              | Typical position | Purpose                                                                    |
-| ----------------- | ---------------- | -------------------------------------------------------------------------- |
-| Job configuration | Upper-left       | Choose training type, model, dataset, and sample prompts.                  |
-| Resource monitor  | Lower-left       | Shows CPU, system memory, GPU usage, VRAM, temperature, clocks, and power. |
-| Active jobs       | Upper-right      | Shows current training progress and allows stopping a job.                 |
-| Model output      | Lower-right      | Lists finished model files and output folders.                             |
-
-### Dataset Management
-
-Use this page to manage training datasets.
-
-* View all datasets.
-* Create or remove datasets.
-* Open dataset folders in File Explorer.
-* Enter a dataset detail page to edit captions.
-* Add images and inspect caption status.
-
-### Base Model Management
-
-Use this page to manage base models.
-
-* View downloaded models.
-* Download models from official cloud-drive links when provided.
-* Add custom local models.
-* Configure single-file model formats.
-* Refresh model scanning after moving files.
-
-## Training Dashboard
-
-### Training Type
-
-The default workflow is LoRA training. It is suitable for teaching a model a character, person, product, object, style, visual concept, or motion-related target depending on the selected model family.
-
-### Model Source
-
-TutuTrainer supports three normal ways to select a base model.
-
-| Source             | When to use it                                                                                       |
-| ------------------ | ---------------------------------------------------------------------------------------------------- |
-| Automatic download | Use this when you want the app to download required files if they are not already available locally. |
-| Local model        | Use this when the model has already been downloaded into the model folder.                           |
-| Custom model       | Use this when the model lives outside the standard folder or needs manual component configuration.   |
-
 ### Supported Model Architectures
 
-TutuTrainer supports image generation, image editing, and video training model architectures. The model selector in your installed version is the final source of truth, but the main public model list includes the following architectures.
+The model selector in your installed version is the final source of truth. The main public model list includes the following architectures.
 
 Image generation models:
 
@@ -265,19 +152,50 @@ Video and audio-capable models:
 | Wan 2.2 T2V (14B)     | 24 GB                   | Text-to-video training                  |
 | Wan 2.2 TI2V (5B)     | 16 GB                   | Lighter text/image-to-video training    |
 
-The exact list in your app may change by version. Use the in-app model selector as the final source of truth.
+These numbers are practical guidance, not a strict guarantee. Dataset size, image resolution, model format, driver state, other running programs, and Windows virtual memory can all affect whether a job starts successfully.
 
-### Choosing a Model
+High-memory models, especially Qwen image-editing workflows and larger video workflows, may need 96 GB system memory or more even when the GPU VRAM looks sufficient.
 
-Choose by hardware first, then by training goal.
+### Choosing a Starting Point
 
-| Goal                     | Practical direction                                                         |
-| ------------------------ | --------------------------------------------------------------------------- |
-| First test run           | Start with SD 1.5, SDXL, or another lower-memory option.                    |
-| Character or person LoRA | Use a model family that works well for your target generation workflow.     |
-| Style LoRA               | Most image model families can work if the dataset is consistent.            |
-| Chinese prompts          | Qwen-Image and Z-Image are commonly selected for Chinese prompt workflows.  |
-| Video LoRA               | Use the matching video model family and expect higher time and memory cost. |
+| Scenario                  | Recommended direction           | Why                                                           |
+| ------------------------- | ------------------------------- | ------------------------------------------------------------- |
+| First experiment          | SD 1.5, SDXL, or Z-Image        | Lower memory requirement and faster feedback.                 |
+| Character or person LoRA  | Z-Image or FLUX2 Klein family   | Strong general image quality when hardware allows.            |
+| Style LoRA                | Any suitable image model family | Dataset consistency matters more than brand-new model choice. |
+| Chinese prompt workflow   | Qwen-Image or Z-Image           | Better fit for Chinese-language prompting workflows.          |
+| Limited VRAM, 10 to 16 GB | SD 1.5, SDXL, or Wan 2.2 TI2V   | More practical on lower-memory GPUs.                          |
+| Video training            | Wan 2.2 TI2V                    | More practical than larger video model families.              |
+
+## Interface Overview
+
+TutuTrainer has three main working pages in the top navigation.
+
+| Page                  | Purpose                                                       |
+| --------------------- | ------------------------------------------------------------- |
+| Training Dashboard    | Configure, start, monitor, stop, and review training jobs.    |
+| Dataset Management    | Create datasets, add images, and edit captions.               |
+| Base Model Management | Download, scan, configure, and register base models.          |
+
+## Training Dashboard
+
+### Training Type
+
+The default workflow is LoRA training. It is suitable for teaching a model a character, person, product, object, style, visual concept, or motion-related target depending on the selected model family.
+
+### Model Source
+
+TutuTrainer supports three normal ways to select a base model.
+
+| Source             | When to use it                                                                                       |
+| ------------------ | ---------------------------------------------------------------------------------------------------- |
+| Automatic download | Use this when you want the app to download required files if they are not already available locally. |
+| Local model        | Use this when the model has already been downloaded into the model folder.                           |
+| Custom model       | Use this when the model lives outside the standard folder or needs manual component configuration.   |
+
+### Model Architecture
+
+Choose the architecture that matches your base model and target workflow. Use [Hardware and Model Guidance](user-guide.md#hardware-and-model-guidance) when you need model names, VRAM guidance, or a starting-point recommendation.
 
 ### Target Dataset
 
@@ -310,7 +228,7 @@ The path settings control where the app reads and writes important files.
 | Dataset folder         | Dataset discovery and dataset creation.                    |
 | Model folder           | Base model discovery, downloads, and local model scanning. |
 
-Check paths before large jobs, especially if you use external drives, cloud disks, or multiple TutuTrainer installations.
+If the UI cannot see your datasets or models, check these paths first. Most "not found" problems come from the app looking at a different root folder than the one you edited in File Explorer.
 
 ### Start Training
 
@@ -339,7 +257,7 @@ Typical fields include:
 
 If GPU usage stays very low after training starts, check the logs and make sure the job actually entered the training stage.
 
-### Active Jobs
+### Active Jobs and Auto Stop Timer
 
 The active job card shows:
 
@@ -357,7 +275,13 @@ The detail page commonly includes:
 * Samples: generated sample images.
 * Config File: full configuration used for that run.
 
-### Model Output
+TutuTrainer also includes an auto stop timer for active training jobs. Open the **Auto Stop (hours)** menu and choose a preset duration such as 2, 4, 8, 12, or 24 hours. You can also enter a custom hour and minute value, then click **Set**.
+
+When the selected time limit is reached, TutuTrainer stops the training job automatically. This is useful because default step counts are often generous, and a job does not always need to run all the way to the final step.
+
+The timer controls training duration; it does not automatically decide which checkpoint is best.
+
+### Model Output and Checkpoints
 
 The output area lists finished model files.
 
@@ -371,6 +295,8 @@ You can usually see:
 * Open-folder action.
 
 Outputs can be sorted or filtered depending on the app version.
+
+Test several saved checkpoints in your target generation workflow. The final checkpoint may be overtrained, so choose the checkpoint that performs best for your prompts.
 
 ## Dataset Management
 
@@ -625,10 +551,6 @@ Always test the finished LoRA in your actual generation workflow before deciding
 
 The model is saved under the training output folder configured in path settings. You can also use the model output area to download the file or open the output folder.
 
-#### Which of the saved checkpoints is best?
-
-You need to test all checkpoints. The best checkpoint is often not the final one. The final checkpoint may be overtrained.
-
 ### Dataset and Model Files
 
 #### Moving or copying a cached model keeps showing "processing". Is the app frozen?
@@ -653,20 +575,9 @@ image1.jpg
 image1.txt
 ```
 
-## Best Practices
+## Practical Tips
 
-### Choose the Right Model
-
-| Scenario                  | Recommended direction           | Why                                                           |
-| ------------------------- | ------------------------------- | ------------------------------------------------------------- |
-| First experiment          | SD 1.5, SDXL, or Z-Image        | Lower memory requirement and faster feedback.                 |
-| Character or person LoRA  | Z-Image or FLUX2 Klein family   | Strong general image quality when hardware allows.            |
-| Style LoRA                | Any suitable image model family | Dataset consistency matters more than brand-new model choice. |
-| Chinese prompt workflow   | Qwen-Image or Z-Image           | Better fit for Chinese-language prompting workflows.          |
-| Limited VRAM, 10 to 16 GB | SD 1.5 or SDXL                  | More practical on lower-memory GPUs.                          |
-| Video training            | Wan 2.2 5B                      | More practical than larger video model families.              |
-
-### Prepare Datasets Carefully
+### Dataset Quality
 
 1. Keep the dataset focused on one target concept.
 2. Prefer fewer high-quality images over many weak images.
@@ -674,7 +585,7 @@ image1.txt
 4. Include moderate variation in pose, angle, expression, lighting, or background when it helps the target.
 5. Remove images that teach the wrong thing.
 
-### Monitor Training
+### Training Review
 
 1. Watch sample images during training.
 2. Watch GPU usage, VRAM, and temperature.
@@ -682,7 +593,7 @@ image1.txt
 4. Stop early if the model has already reached the desired result.
 5. Save logs when diagnosing failed jobs.
 
-### Use Results
+### Using Results
 
 The finished `.safetensors` LoRA file can usually be used in tools that support LoRA loading, such as:
 
