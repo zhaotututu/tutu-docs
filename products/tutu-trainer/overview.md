@@ -280,34 +280,6 @@ Recommended configuration:
 
 ***
 
-## Comparison with Traditional Command-Line Trainers
-
-| Dimension               | TutuTrainer                | Traditional command-line tools |
-| ----------------------- | -------------------------- | ------------------------------ |
-| Installation difficulty | Double-click installer     | Expert setup                   |
-| Graphical interface     | Modern web UI              | Usually none or basic          |
-| Parameter tuning        | Automatic recommendations  | Manual documentation lookup    |
-| Model support           | Broad architecture support | Depends on toolchain           |
-| Training monitoring     | Real-time dashboard        | Terminal text                  |
-| Error diagnosis         | Guided suggestions         | Manual troubleshooting         |
-| Task management         | Queue system               | Often manual                   |
-| Chinese support         | Fully localized            | Often English-first            |
-
-***
-
-## Installation and Quick Start
-
-1. Download the package.
-2. Run the app.
-3. Start training.
-
-Basic flow:
-
-1. Choose the training target, such as FLUX.1-dev.
-2. Choose the model source.
-3. Choose the target dataset.
-4. Click Start Training.
-
 ## Typical Scenario: Character LoRA
 
 Goal: train a virtual IP character for a client.
@@ -327,11 +299,6 @@ Expected result:
 * The model can reproduce the character appearance.
 * Character consistency is maintained.
 * Pose, outfit, and background can still be controlled by prompts.
-
-## Contact
-
-* QQ: `331506796`
-* WeChat: `tujiang0411`
 
 ## License
 
