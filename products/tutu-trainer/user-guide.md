@@ -8,6 +8,7 @@ Official website: https://zhaotutu.xyz
 
 * [Download](user-guide.md#download)
 * [Quick Start](user-guide.md#quick-start)
+* [Auto Stop Timer](user-guide.md#auto-stop-timer)
 * [System Requirements](user-guide.md#system-requirements)
 * [Install and Start](user-guide.md#install-and-start)
 * [Interface Overview](user-guide.md#interface-overview)
@@ -107,6 +108,23 @@ When the run is complete:
 4. Test several checkpoints in your target generation workflow.
 
 The final checkpoint is not always the best checkpoint. Test all saved checkpoints and choose the one that performs best for your target prompts.
+
+## Auto Stop Timer
+
+TutuTrainer includes an auto stop timer for active training jobs. In the Active Projects area, open the **Auto Stop (hours)** menu and choose a preset duration such as 2, 4, 8, 12, or 24 hours. You can also enter a custom hour and minute value, then click **Set**.
+
+When the selected time limit is reached, TutuTrainer stops the training job automatically.
+
+This feature is designed for normal training workflows where the configured step count is often intentionally generous. A job does not always need to run all the way to the final step. In many cases, the best checkpoint may appear earlier, and continuing for too long can waste GPU time or overtrain the result.
+
+Use the timer when you want to:
+
+* Limit overnight or long training runs.
+* Stop a job after a fixed test window.
+* Avoid using more GPU time than needed.
+* Keep intermediate checkpoints while preventing the run from continuing indefinitely.
+
+After the timer stops a job, review the saved samples and checkpoints. The timer controls training duration; it does not automatically decide which checkpoint is best.
 
 ## System Requirements
 
