@@ -183,11 +183,11 @@ High-memory models, especially Qwen image-editing workflows and larger video wor
 
 TutuTrainer has three main working pages in the top navigation.
 
-| Page                  | Purpose                                                       |
-| --------------------- | ------------------------------------------------------------- |
-| Training Dashboard    | Configure, start, monitor, stop, and review training jobs.    |
-| Dataset Management    | Create datasets, add images, and edit captions.               |
-| Base Model Management | Download, scan, configure, and register base models.          |
+| Page                  | Purpose                                                    |
+| --------------------- | ---------------------------------------------------------- |
+| Training Dashboard    | Configure, start, monitor, stop, and review training jobs. |
+| Dataset Management    | Create datasets, add images, and edit captions.            |
+| Base Model Management | Download, scan, configure, and register base models.       |
 
 ## Training Dashboard
 
@@ -513,13 +513,11 @@ Windows ran out of usable memory or virtual memory. Increase system memory if po
 
 This is normal for some training processes. Minimize it and let the job continue.
 
-![Training backend console window](../../.gitbook/assets/overview-01.png)
+![](../../.gitbook/assets/user-guide-06.png)
 
 #### What is the difference between separated format and merged format?
 
 Separated format is the standard folder-style model layout used by many diffusion model repositories. The model is split into multiple component folders and files.
-
-![Separated model folder example](../../.gitbook/assets/user-guide-06.png)
 
 Merged format is a single-file model format, commonly seen in ComfyUI workflows as one `.safetensors` file.
 
