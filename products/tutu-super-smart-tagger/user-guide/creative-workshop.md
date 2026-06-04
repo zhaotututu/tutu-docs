@@ -9,18 +9,14 @@ It supports text-to-image without reference images, and image-to-image or multi-
 ## Basic Workflow
 
 1. Upload 1 to 5 reference images if needed. If no reference image is uploaded, the workflow runs as text-to-image.
-
 2. Choose a preset style, or directly enter your own editing or generation instruction.
-
 3. Choose the number of images to generate. In default mode, you can also choose resolution and aspect ratio, and view the corresponding credit cost prompt.
-
 4. Click Start Generation and wait for progress to complete.
-
 5. View images in the result area on the right. You can download one image, download a ZIP, or open history to reuse prompts.
 
 Creative Workshop main interface. Upload reference images, choose a style, enter instructions, and generate images.
 
-![Creative Workshop main interface](../../../assets/tutu-super-smart-tagger/user-guide/creative-workshop/creative-workshop-01.png)
+![Creative Workshop main interface](../../../.gitbook/assets/creative-workshop-01.png)
 
 ### Reference Images, Prompts, and Generation Parameters
 
@@ -58,7 +54,7 @@ Edit history can recover previous prompts and thumbnails. It is useful when iter
 
 Creative Workshop edit history. View historical thumbnails, copy or reuse prompts, and delete records.
 
-![Creative Workshop edit history](../../../assets/tutu-super-smart-tagger/user-guide/creative-workshop/creative-workshop-02.png)
+![Creative Workshop edit history](../../../.gitbook/assets/creative-workshop-02.png)
 
 ### Reusing and Deleting History
 

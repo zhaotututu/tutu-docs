@@ -4,9 +4,9 @@
 
 Image Prompt Reverse Captioning is a drop-down entry in the top navigation bar. It contains three modes:
 
-- Prompt Phrase Mode
-- Natural Language Mode
-- Reference Reverse Captioning
+* Prompt Phrase Mode
+* Natural Language Mode
+* Reference Reverse Captioning
 
 Prompt Phrase Mode is used to generate keyword, tag, and phrase-style training data.
 
@@ -18,7 +18,7 @@ The default AI can handle these tasks directly. Regular users do not need to con
 
 Image Prompt Reverse Captioning entry. The drop-down menu contains Prompt Phrase, Natural Language, and Reference Reverse Captioning modes.
 
-![Image Prompt Reverse Captioning entry](../../../assets/tutu-super-smart-tagger/user-guide/image-reverse-prompts/image-reverse-prompts-01.png)
+![Image Prompt Reverse Captioning entry](../../../.gitbook/assets/image-reverse-prompts-01.png)
 
 ## Prompt Phrase Mode
 
@@ -30,19 +30,19 @@ When importing images, you can use the import button or drag images into the pag
 
 Prompt Phrase Mode main interface. You can import images, manage tags, filter materials, and adjust thumbnail size.
 
-![Prompt Phrase Mode main interface](../../../assets/tutu-super-smart-tagger/user-guide/image-reverse-prompts/image-reverse-prompts-02.png)
+![Prompt Phrase Mode main interface](../../../.gitbook/assets/image-reverse-prompts-02.png)
 
 When generating tags with Smart Generate, the default AI uses account credits. If a task fails, credits are insufficient, or the returned result is abnormal, the app should not write a successful billing record.
 
 Smart Generate tags dialog. The default AI generates prompt phrases for the selected range.
 
-![Smart Generate tags dialog](../../../assets/tutu-super-smart-tagger/user-guide/image-reverse-prompts/image-reverse-prompts-03.png)
+![Smart Generate tags dialog](../../../.gitbook/assets/image-reverse-prompts-03.png)
 
 Before batch processing, always confirm the current range: selected images, current filtered results, or the whole project. The current version gives clearer range prompts, but it is still best to check once before running.
 
 Prompt phrase generation result. After generation, check the image range and tag content.
 
-![Prompt phrase generation result](../../../assets/tutu-super-smart-tagger/user-guide/image-reverse-prompts/image-reverse-prompts-04.png)
+![Prompt phrase generation result](../../../.gitbook/assets/image-reverse-prompts-04.png)
 
 ### Image Grid, Selection, and Status Badges
 
@@ -90,19 +90,19 @@ The left side of the page contains the natural-language description editor and s
 
 Natural Language Mode main interface.
 
-![Natural Language Mode main interface](../../../assets/tutu-super-smart-tagger/user-guide/image-reverse-prompts/image-reverse-prompts-05.png)
+![Natural Language Mode main interface](../../../.gitbook/assets/image-reverse-prompts-05.png)
 
 You can type descriptions manually or click Smart Generate to let the default AI generate full descriptions from the image.
 
 Smart Generate descriptions dialog. The default AI can generate complete descriptive sentences for selected images.
 
-![Smart Generate descriptions dialog](../../../assets/tutu-super-smart-tagger/user-guide/image-reverse-prompts/image-reverse-prompts-06.png)
+![Smart Generate descriptions dialog](../../../.gitbook/assets/image-reverse-prompts-06.png)
 
 After generation, you can edit, delete, translate, and reorder sentences one by one. You can also use the sentence library to filter images that contain a specific description sentence.
 
 Natural-language description result. After generation, descriptions can be edited, translated, filtered, and exported.
 
-![Natural-language description result](../../../assets/tutu-super-smart-tagger/user-guide/image-reverse-prompts/image-reverse-prompts-07.png)
+![Natural-language description result](../../../.gitbook/assets/image-reverse-prompts-07.png)
 
 When exporting, use the natural-language description dataset export entry. You can export all images or the selected range.
 
@@ -138,7 +138,7 @@ The page is centered on image pairs: import source images, import result images,
 
 Reference Reverse Captioning. Source and result images are displayed as pairs for change-description generation.
 
-![Reference Reverse Captioning](../../../assets/tutu-super-smart-tagger/user-guide/image-reverse-prompts/image-reverse-prompts-08.png)
+![Reference Reverse Captioning](../../../.gitbook/assets/image-reverse-prompts-08.png)
 
 When AI generates a paired description, the default AI considers both images and describes the subject, composition, style, local changes, and final differences.
 
@@ -146,7 +146,7 @@ If an image pair is missing either the source image or result image, complete th
 
 Edit paired description dialog. Reference reverse-caption results can be manually supplemented or corrected.
 
-![Edit paired description dialog](../../../assets/tutu-super-smart-tagger/user-guide/image-reverse-prompts/image-reverse-prompts-09.png)
+![Edit paired description dialog](../../../.gitbook/assets/image-reverse-prompts-09.png)
 
 ### Four Lists in Reference Reverse Captioning
 
@@ -178,7 +178,7 @@ Before export, check the current project, whether only the images you need are s
 
 Image dataset export dialog. Before export, confirm format, output directory, conflict handling, and compression options.
 
-![Image dataset export dialog](../../../assets/tutu-super-smart-tagger/user-guide/image-reverse-prompts/image-reverse-prompts-10.png)
+![Image dataset export dialog](../../../.gitbook/assets/image-reverse-prompts-10.png)
 
 If the exported result is empty, first check whether tags or natural-language descriptions have actually been written in that mode.
 
@@ -190,9 +190,9 @@ Before export, confirm the current project, current mode, current filters, and s
 
 If the export result is empty, check four things first:
 
-- Whether the current images actually have tags or descriptions written.
-- Whether images are hidden by search, tag, or sentence filters.
-- Whether only empty-data images are selected.
-- Whether image pairs are complete in Reference Reverse Captioning.
+* Whether the current images actually have tags or descriptions written.
+* Whether images are hidden by search, tag, or sentence filters.
+* Whether only empty-data images are selected.
+* Whether image pairs are complete in Reference Reverse Captioning.
 
 For Reference Reverse Captioning export, especially check whether both source and result images exist. Organize unpaired images in the corresponding lists first. Export after pairing is complete and descriptions have been confirmed.

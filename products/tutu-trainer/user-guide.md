@@ -1,4 +1,4 @@
-# TutuTrainer User Guide
+# User Guide
 
 This guide walks through the normal TutuTrainer desktop workflow: installing the app, preparing a dataset, choosing a base model, starting LoRA training, monitoring progress, and using the finished model.
 
@@ -6,17 +6,17 @@ Official website: https://zhaotutu.xyz
 
 ## Contents
 
-- [Download](#download)
-- [Quick Start](#quick-start)
-- [System Requirements](#system-requirements)
-- [Install and Start](#install-and-start)
-- [Interface Overview](#interface-overview)
-- [Training Dashboard](#training-dashboard)
-- [Dataset Management](#dataset-management)
-- [Base Model Management](#base-model-management)
-- [FAQ](#faq)
-- [Best Practices](#best-practices)
-- [Appendix](#appendix)
+* [Download](user-guide.md#download)
+* [Quick Start](user-guide.md#quick-start)
+* [System Requirements](user-guide.md#system-requirements)
+* [Install and Start](user-guide.md#install-and-start)
+* [Interface Overview](user-guide.md#interface-overview)
+* [Training Dashboard](user-guide.md#training-dashboard)
+* [Dataset Management](user-guide.md#dataset-management)
+* [Base Model Management](user-guide.md#base-model-management)
+* [FAQ](user-guide.md#faq)
+* [Best Practices](user-guide.md#best-practices)
+* [Appendix](user-guide.md#appendix)
 
 ## Download
 
@@ -40,15 +40,15 @@ You can start a first LoRA training run in a few minutes once your paths, datase
 4. Configure the dataset folder, model folder, and training output folder.
 5. Save the path settings before creating or scanning datasets.
 
-![Path settings on the training dashboard](../../assets/tutu-trainer/user-guide/user-guide-01.png)
+![Path settings on the training dashboard](../../.gitbook/assets/user-guide-01.png)
 
 Recommended path roles:
 
-| Path | Purpose |
-| --- | --- |
-| Dataset folder | Stores all image datasets used for training. |
-| Model folder | Stores downloaded, local, and configured base models. |
-| Training output folder | Stores LoRA files, samples, logs, and job outputs. |
+| Path                   | Purpose                                               |
+| ---------------------- | ----------------------------------------------------- |
+| Dataset folder         | Stores all image datasets used for training.          |
+| Model folder           | Stores downloaded, local, and configured base models. |
+| Training output folder | Stores LoRA files, samples, logs, and job outputs.    |
 
 If the UI cannot see your datasets or models, check these paths first. Most "not found" problems come from the app looking at a different root folder than the one you edited in File Explorer.
 
@@ -60,15 +60,15 @@ If the UI cannot see your datasets or models, check these paths first. Most "not
 4. Add image files to the dataset.
 5. Write or import a caption file for each image.
 
-![Dataset list and dataset creation](../../assets/tutu-trainer/user-guide/user-guide-02.png)
+![Dataset list and dataset creation](../../.gitbook/assets/user-guide-02.png)
 
-![Dataset detail page with image cards](../../assets/tutu-trainer/user-guide/user-guide-03.png)
+![Dataset detail page with image cards](../../.gitbook/assets/user-guide-03.png)
 
 Each training image should have a matching caption. TutuTrainer saves captions as `.txt` files with the same base filename as the image.
 
 Example:
 
-```text
+```
 image001.jpg
 image001.txt
 ```
@@ -91,7 +91,7 @@ TutuTrainer calculates recommended training settings automatically based on the 
 
 During training, watch the job progress, resource usage, samples, and logs.
 
-![Training progress and job dashboard](../../assets/tutu-trainer/user-guide/user-guide-04.png)
+![Training progress and job dashboard](../../.gitbook/assets/user-guide-04.png)
 
 When the run is complete:
 
@@ -108,31 +108,31 @@ TutuTrainer is a Windows desktop application for local or cloud GPU LoRA trainin
 
 ### Hardware Requirements
 
-| Item | Minimum | Recommended |
-| --- | --- | --- |
-| Operating system | Windows 10/11, 64-bit | Windows 11, 64-bit |
-| CPU | Intel Core i5 or comparable | Intel Core i7/i9 or AMD Ryzen 7/9 |
-| System memory | 64 GB RAM | 96 GB RAM or more |
-| GPU | NVIDIA GPU with 16 GB or more VRAM | RTX 5090, RTX 4090, or professional 24 GB+ NVIDIA GPU |
-| Storage | 100 GB free space | 500 GB+ NVMe SSD |
-| Driver | NVIDIA driver 522.25 or newer | Latest NVIDIA driver |
+| Item             | Minimum                            | Recommended                                           |
+| ---------------- | ---------------------------------- | ----------------------------------------------------- |
+| Operating system | Windows 10/11, 64-bit              | Windows 11, 64-bit                                    |
+| CPU              | Intel Core i5 or comparable        | Intel Core i7/i9 or AMD Ryzen 7/9                     |
+| System memory    | 64 GB RAM                          | 96 GB RAM or more                                     |
+| GPU              | NVIDIA GPU with 16 GB or more VRAM | RTX 5090, RTX 4090, or professional 24 GB+ NVIDIA GPU |
+| Storage          | 100 GB free space                  | 500 GB+ NVMe SSD                                      |
+| Driver           | NVIDIA driver 522.25 or newer      | Latest NVIDIA driver                                  |
 
 ### VRAM and Memory Guidance by Model
 
-| Model family | Approximate VRAM | Approximate system memory | Typical GPU guidance |
-| --- | --- | --- | --- |
-| SD 1.5 | About 10 GB | Lower | RTX 3060 or better |
-| SDXL | About 16 GB | About 16 GB | RTX 4070 or better |
-| FLUX.1-dev | About 32 GB | 30 GB+ | RTX 5090 class |
-| Qwen-Image | About 32 GB | 70 GB+ | RTX 5090 class with high system memory |
-| Qwen-Image-Edit | About 32 GB | About 96 GB | RTX 5090 class with high system memory |
-| Wan 2.2 5B (TI2V) | About 16 GB | About 64 GB | RTX 4070 or better |
-| Wan 2.2 14B (T2V/I2V) | About 32 GB | About 96 GB | RTX 5090 or professional 24 GB+ GPU |
-| FLUX Kontext | About 32 GB | About 50 GB | RTX 5090 or professional 24 GB+ GPU |
-| LTX 2 | About 32 GB | About 64 GB | RTX 5090 class |
-| FLUX2 Klein 4B | About 16 GB | About 64 GB | RTX 4070, RTX 4090, or RTX 5090 |
-| FLUX2 Klein 9B | About 24 GB | About 64 GB | RTX 4090 or RTX 5090 |
-| ERNIE-Image | About 24 GB | About 24 GB | RTX 3090 or better |
+| Model family          | Approximate VRAM | Approximate system memory | Typical GPU guidance                   |
+| --------------------- | ---------------- | ------------------------- | -------------------------------------- |
+| SD 1.5                | About 10 GB      | Lower                     | RTX 3060 or better                     |
+| SDXL                  | About 16 GB      | About 16 GB               | RTX 4070 or better                     |
+| FLUX.1-dev            | About 32 GB      | 30 GB+                    | RTX 5090 class                         |
+| Qwen-Image            | About 32 GB      | 70 GB+                    | RTX 5090 class with high system memory |
+| Qwen-Image-Edit       | About 32 GB      | About 96 GB               | RTX 5090 class with high system memory |
+| Wan 2.2 5B (TI2V)     | About 16 GB      | About 64 GB               | RTX 4070 or better                     |
+| Wan 2.2 14B (T2V/I2V) | About 32 GB      | About 96 GB               | RTX 5090 or professional 24 GB+ GPU    |
+| FLUX Kontext          | About 32 GB      | About 50 GB               | RTX 5090 or professional 24 GB+ GPU    |
+| LTX 2                 | About 32 GB      | About 64 GB               | RTX 5090 class                         |
+| FLUX2 Klein 4B        | About 16 GB      | About 64 GB               | RTX 4070, RTX 4090, or RTX 5090        |
+| FLUX2 Klein 9B        | About 24 GB      | About 64 GB               | RTX 4090 or RTX 5090                   |
+| ERNIE-Image           | About 24 GB      | About 24 GB               | RTX 3090 or better                     |
 
 These numbers are practical guidance, not a strict guarantee. Dataset size, image resolution, model format, driver state, other running programs, and Windows virtual memory can all affect whether a job starts successfully.
 
@@ -161,32 +161,32 @@ TutuTrainer has three main working pages in the top navigation.
 
 This is the main page used for training.
 
-| Area | Typical position | Purpose |
-| --- | --- | --- |
-| Job configuration | Upper-left | Choose training type, model, dataset, and sample prompts. |
-| Resource monitor | Lower-left | Shows CPU, system memory, GPU usage, VRAM, temperature, clocks, and power. |
-| Active jobs | Upper-right | Shows current training progress and allows stopping a job. |
-| Model output | Lower-right | Lists finished model files and output folders. |
+| Area              | Typical position | Purpose                                                                    |
+| ----------------- | ---------------- | -------------------------------------------------------------------------- |
+| Job configuration | Upper-left       | Choose training type, model, dataset, and sample prompts.                  |
+| Resource monitor  | Lower-left       | Shows CPU, system memory, GPU usage, VRAM, temperature, clocks, and power. |
+| Active jobs       | Upper-right      | Shows current training progress and allows stopping a job.                 |
+| Model output      | Lower-right      | Lists finished model files and output folders.                             |
 
 ### Dataset Management
 
 Use this page to manage training datasets.
 
-- View all datasets.
-- Create or remove datasets.
-- Open dataset folders in File Explorer.
-- Enter a dataset detail page to edit captions.
-- Add images and inspect caption status.
+* View all datasets.
+* Create or remove datasets.
+* Open dataset folders in File Explorer.
+* Enter a dataset detail page to edit captions.
+* Add images and inspect caption status.
 
 ### Base Model Management
 
 Use this page to manage base models.
 
-- View downloaded models.
-- Download models from official cloud-drive links when provided.
-- Add custom local models.
-- Configure single-file model formats.
-- Refresh model scanning after moving files.
+* View downloaded models.
+* Download models from official cloud-drive links when provided.
+* Add custom local models.
+* Configure single-file model formats.
+* Refresh model scanning after moving files.
 
 ## Training Dashboard
 
@@ -198,32 +198,32 @@ The default workflow is LoRA training. It is suitable for teaching a model a cha
 
 TutuTrainer supports three normal ways to select a base model.
 
-| Source | When to use it |
-| --- | --- |
+| Source             | When to use it                                                                                       |
+| ------------------ | ---------------------------------------------------------------------------------------------------- |
 | Automatic download | Use this when you want the app to download required files if they are not already available locally. |
-| Local model | Use this when the model has already been downloaded into the model folder. |
-| Custom model | Use this when the model lives outside the standard folder or needs manual component configuration. |
+| Local model        | Use this when the model has already been downloaded into the model folder.                           |
+| Custom model       | Use this when the model lives outside the standard folder or needs manual component configuration.   |
 
 ### Supported Model Architectures
 
 Image model families include:
 
-- FLUX.1 and FLUX.1-dev.
-- FLUX.1-Kontext-dev.
-- Qwen-Image.
-- Qwen-Image-Edit, including newer edit variants when supported by the installed version.
-- Stable Diffusion 1.5.
-- Stable Diffusion XL.
-- Z-Image family.
-- FLUX2 Klein family.
-- ERNIE-Image.
+* FLUX.1 and FLUX.1-dev.
+* FLUX.1-Kontext-dev.
+* Qwen-Image.
+* Qwen-Image-Edit, including newer edit variants when supported by the installed version.
+* Stable Diffusion 1.5.
+* Stable Diffusion XL.
+* Z-Image family.
+* FLUX2 Klein family.
+* ERNIE-Image.
 
 Video model families include:
 
-- Wan 2.2 T2V 14B.
-- Wan 2.2 I2V 14B.
-- Wan 2.2 TI2V 5B.
-- LTX 2 19B.
+* Wan 2.2 T2V 14B.
+* Wan 2.2 I2V 14B.
+* Wan 2.2 TI2V 5B.
+* LTX 2 19B.
 
 The exact list in your app may change by version. Use the in-app model selector as the final source of truth.
 
@@ -231,13 +231,13 @@ The exact list in your app may change by version. Use the in-app model selector 
 
 Choose by hardware first, then by training goal.
 
-| Goal | Practical direction |
-| --- | --- |
-| First test run | Start with SD 1.5, SDXL, or another lower-memory option. |
-| Character or person LoRA | Use a model family that works well for your target generation workflow. |
-| Style LoRA | Most image model families can work if the dataset is consistent. |
-| Chinese prompts | Qwen-Image and Z-Image are commonly selected for Chinese prompt workflows. |
-| Video LoRA | Use the matching video model family and expect higher time and memory cost. |
+| Goal                     | Practical direction                                                         |
+| ------------------------ | --------------------------------------------------------------------------- |
+| First test run           | Start with SD 1.5, SDXL, or another lower-memory option.                    |
+| Character or person LoRA | Use a model family that works well for your target generation workflow.     |
+| Style LoRA               | Most image model families can work if the dataset is consistent.            |
+| Chinese prompts          | Qwen-Image and Z-Image are commonly selected for Chinese prompt workflows.  |
+| Video LoRA               | Use the matching video model family and expect higher time and memory cost. |
 
 ### Target Dataset
 
@@ -254,21 +254,21 @@ If a dataset is missing:
 
 Sample prompts are used to generate preview images during training.
 
-- Open the sample prompt settings from the dashboard.
-- Use preset prompts or write your own.
-- Keep sample prompts close to the final use case.
-- Use both simple and stress-test prompts if you want to judge generalization.
-- Translation tools may be available in the app depending on version.
+* Open the sample prompt settings from the dashboard.
+* Use preset prompts or write your own.
+* Keep sample prompts close to the final use case.
+* Use both simple and stress-test prompts if you want to judge generalization.
+* Translation tools may be available in the app depending on version.
 
 ### Path Settings
 
 The path settings control where the app reads and writes important files.
 
-| Setting | What it affects |
-| --- | --- |
-| Training output folder | LoRA outputs, samples, logs, and job files. |
-| Dataset folder | Dataset discovery and dataset creation. |
-| Model folder | Base model discovery, downloads, and local model scanning. |
+| Setting                | What it affects                                            |
+| ---------------------- | ---------------------------------------------------------- |
+| Training output folder | LoRA outputs, samples, logs, and job files.                |
+| Dataset folder         | Dataset discovery and dataset creation.                    |
+| Model folder           | Base model discovery, downloads, and local model scanning. |
 
 Check paths before large jobs, especially if you use external drives, cloud disks, or multiple TutuTrainer installations.
 
@@ -289,13 +289,13 @@ The resource monitor shows live hardware status.
 
 Typical fields include:
 
-- CPU usage.
-- System memory usage.
-- GPU usage.
-- VRAM usage.
-- GPU temperature.
-- GPU clocks.
-- GPU power.
+* CPU usage.
+* System memory usage.
+* GPU usage.
+* VRAM usage.
+* GPU temperature.
+* GPU clocks.
+* GPU power.
 
 If GPU usage stays very low after training starts, check the logs and make sure the job actually entered the training stage.
 
@@ -303,19 +303,19 @@ If GPU usage stays very low after training starts, check the logs and make sure 
 
 The active job card shows:
 
-- Job name.
-- Current step and total steps.
-- Progress bar.
-- Training speed.
-- Stop button.
+* Job name.
+* Current step and total steps.
+* Progress bar.
+* Training speed.
+* Stop button.
 
 Click a job card to open the detail page.
 
 The detail page commonly includes:
 
-- Overview: job summary and logs.
-- Samples: generated sample images.
-- Config File: full configuration used for that run.
+* Overview: job summary and logs.
+* Samples: generated sample images.
+* Config File: full configuration used for that run.
 
 ### Model Output
 
@@ -323,12 +323,12 @@ The output area lists finished model files.
 
 You can usually see:
 
-- Filename.
-- File size.
-- Related job.
-- Creation time.
-- Download or copy action.
-- Open-folder action.
+* Filename.
+* File size.
+* Related job.
+* Creation time.
+* Download or copy action.
+* Open-folder action.
 
 Outputs can be sorted or filtered depending on the app version.
 
@@ -340,18 +340,18 @@ The dataset list page summarizes the dataset root.
 
 Common statistics:
 
-- Total dataset count.
-- Total image count.
-- Captioned image count.
-- Total file size.
+* Total dataset count.
+* Total image count.
+* Captioned image count.
+* Total file size.
 
 Common actions:
 
-- Open guide.
-- Refresh.
-- Open dataset folder.
-- Open captioning tool.
-- Create dataset.
+* Open guide.
+* Refresh.
+* Open dataset folder.
+* Open captioning tool.
+* Create dataset.
 
 ### View Modes
 
@@ -365,13 +365,13 @@ The dataset detail page shows the images in one dataset.
 
 Common functions:
 
-- View all images.
-- See caption status.
-- Search or filter images.
-- Filter by captioned or uncaptained status.
-- Add images.
-- Open an image viewer.
-- Edit captions.
+* View all images.
+* See caption status.
+* Search or filter images.
+* Filter by captioned or uncaptained status.
+* Add images.
+* Open an image viewer.
+* Edit captions.
 
 ### Add Images
 
@@ -389,7 +389,7 @@ Captions are automatically saved as `.txt` files with the same base filename.
 
 Example:
 
-```text
+```
 portrait_0001.png
 portrait_0001.txt
 ```
@@ -398,11 +398,11 @@ portrait_0001.txt
 
 Recommended image properties:
 
-- Format: JPG, JPEG, or PNG.
-- Resolution: usually 512x512 to 2048x2048 is practical.
-- Quality: clear, sharp, and not heavily compressed.
-- Content: aligned with the concept you want the LoRA to learn.
-- Quantity: enough variation to learn the target without burying it in unrelated material.
+* Format: JPG, JPEG, or PNG.
+* Resolution: usually 512x512 to 2048x2048 is practical.
+* Quality: clear, sharp, and not heavily compressed.
+* Content: aligned with the concept you want the LoRA to learn.
+* Quantity: enough variation to learn the target without burying it in unrelated material.
 
 Remove images that are blurry, duplicated, misleading, watermarked in a harmful way, or unrelated to the training target.
 
@@ -412,13 +412,13 @@ Each image should have a caption that describes what is actually visible.
 
 Person or character example:
 
-```text
+```
 a young woman with long black hair, wearing a white dress, sitting on a bench, park background, natural lighting, upper body shot
 ```
 
 Style example:
 
-```text
+```
 oil painting of a mountain landscape, impressionist style, warm colors, soft brushstrokes, sunset lighting
 ```
 
@@ -430,20 +430,20 @@ Good captions are consistent but not fake. Do not force a tag into every image u
 
 The model manager lists recognized base models.
 
-| Column | Meaning |
-| --- | --- |
-| Model name | Display name and storage path. |
-| Type | Diffusers-style folder format or single-file format. |
-| Source | Local, cache, download, or custom source. |
-| Size | Model file or folder size. |
-| Actions | Configure, edit, open, refresh, or remove depending on model type. |
+| Column     | Meaning                                                            |
+| ---------- | ------------------------------------------------------------------ |
+| Model name | Display name and storage path.                                     |
+| Type       | Diffusers-style folder format or single-file format.               |
+| Source     | Local, cache, download, or custom source.                          |
+| Size       | Model file or folder size.                                         |
+| Actions    | Configure, edit, open, refresh, or remove depending on model type. |
 
 ### Common Actions
 
-- Refresh: scan the model folder again.
-- Open folder: open the model folder in File Explorer.
-- Cloud-drive download: open provided model download links.
-- Add custom model: register a model outside the standard folder.
+* Refresh: scan the model folder again.
+* Open folder: open the model folder in File Explorer.
+* Cloud-drive download: open provided model download links.
+* Add custom model: register a model outside the standard folder.
 
 ### Download a Model
 
@@ -495,7 +495,7 @@ Install Microsoft WebView2 Runtime. Some installers include a `WebView2Installer
 
 Install the Microsoft Visual C++ Redistributable for x64 Windows. A common official Microsoft link is:
 
-https://aka.ms/vs/17/release/vc_redist.x64.exe
+https://aka.ms/vs/17/release/vc\_redist.x64.exe
 
 #### The window is blank after launch.
 
@@ -535,13 +535,13 @@ Windows ran out of usable memory or virtual memory. Increase system memory if po
 
 This is normal for some training processes. Minimize it and let the job continue.
 
-![Training backend console window](../../assets/tutu-trainer/user-guide/user-guide-05.png)
+![Training backend console window](../../.gitbook/assets/user-guide-05.png)
 
 #### What is the difference between separated format and merged format?
 
 Separated format is the standard folder-style model layout used by many diffusion model repositories. The model is split into multiple component folders and files.
 
-![Separated model folder example](../../assets/tutu-trainer/user-guide/user-guide-06.png)
+![Separated model folder example](../../.gitbook/assets/user-guide-06.png)
 
 Merged format is a single-file model format, commonly seen in ComfyUI workflows as one `.safetensors` file.
 
@@ -553,7 +553,7 @@ Important notes:
 2. If you are not familiar with model formats, use automatic download first.
 3. After a merged model is converted, the app may show an associated separated model. Training uses that associated model. The conversion does not modify the original source file.
 
-![Associated converted model example](../../assets/tutu-trainer/user-guide/user-guide-07.png)
+![Associated converted model example](../../.gitbook/assets/user-guide-07.png)
 
 #### Training is very slow.
 
@@ -608,7 +608,7 @@ Check:
 
 Caption files must have the same base filename as the image and use the `.txt` extension.
 
-```text
+```
 image1.jpg
 image1.txt
 ```
@@ -617,14 +617,14 @@ image1.txt
 
 ### Choose the Right Model
 
-| Scenario | Recommended direction | Why |
-| --- | --- | --- |
-| First experiment | SD 1.5, SDXL, or Z-Image | Lower memory requirement and faster feedback. |
-| Character or person LoRA | Z-Image or FLUX2 Klein family | Strong general image quality when hardware allows. |
-| Style LoRA | Any suitable image model family | Dataset consistency matters more than brand-new model choice. |
-| Chinese prompt workflow | Qwen-Image or Z-Image | Better fit for Chinese-language prompting workflows. |
-| Limited VRAM, 10 to 16 GB | SD 1.5 or SDXL | More practical on lower-memory GPUs. |
-| Video training | Wan 2.2 5B | More practical than larger video model families. |
+| Scenario                  | Recommended direction           | Why                                                           |
+| ------------------------- | ------------------------------- | ------------------------------------------------------------- |
+| First experiment          | SD 1.5, SDXL, or Z-Image        | Lower memory requirement and faster feedback.                 |
+| Character or person LoRA  | Z-Image or FLUX2 Klein family   | Strong general image quality when hardware allows.            |
+| Style LoRA                | Any suitable image model family | Dataset consistency matters more than brand-new model choice. |
+| Chinese prompt workflow   | Qwen-Image or Z-Image           | Better fit for Chinese-language prompting workflows.          |
+| Limited VRAM, 10 to 16 GB | SD 1.5 or SDXL                  | More practical on lower-memory GPUs.                          |
+| Video training            | Wan 2.2 5B                      | More practical than larger video model families.              |
 
 ### Prepare Datasets Carefully
 
@@ -646,10 +646,10 @@ image1.txt
 
 The finished `.safetensors` LoRA file can usually be used in tools that support LoRA loading, such as:
 
-- ComfyUI.
-- Stable Diffusion WebUI variants.
-- Fooocus.
-- Other LoRA-compatible generation tools.
+* ComfyUI.
+* Stable Diffusion WebUI variants.
+* Fooocus.
+* Other LoRA-compatible generation tools.
 
 Test the LoRA with simple prompts first, then move to more complex final prompts.
 
@@ -659,7 +659,7 @@ Test the LoRA with simple prompts first, then move to more complex final prompts
 
 Typical installation folders may include:
 
-```text
+```
 TutuTrainer/
 |-- TutuTrainer.exe
 |-- WebView2Installer.exe
@@ -676,10 +676,10 @@ The exact folder layout can change by version.
 
 The main data folders are controlled by path settings:
 
-- Dataset folder.
-- Model folder.
-- Training output folder.
-- Logs folder.
+* Dataset folder.
+* Model folder.
+* Training output folder.
+* Logs folder.
 
 If you need support, keep the relevant logs and the job configuration file.
 
@@ -687,9 +687,9 @@ If you need support, keep the relevant logs and the job configuration file.
 
 Use the icons in the upper-right area of the app when available:
 
-- Bilibili tutorials.
-- Ko-fi support.
-- YouTube channel.
+* Bilibili tutorials.
+* Ko-fi support.
+* YouTube channel.
 
 ### Support
 
@@ -697,5 +697,5 @@ If you need help, check the logs first, then contact the official support channe
 
 Public contact information from the original Chinese guide:
 
-- QQ: 331506796
-- WeChat: tujiang0411
+* QQ: 331506796
+* WeChat: tujiang0411

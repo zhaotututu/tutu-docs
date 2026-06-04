@@ -12,7 +12,7 @@ The current page mainly displays author cards sorted by recommendation weight. C
 
 AI Lab author card list. Use the platform icons on each card to open the corresponding external resources.
 
-![AI Lab author card list](../../../assets/tutu-super-smart-tagger/user-guide/ai-lab/ai-lab-01.png)
+![AI Lab author card list](../../../.gitbook/assets/ai-lab-01.png)
 
 ### Author Cards and External Links
 

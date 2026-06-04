@@ -8,7 +8,7 @@ The left side selects the project and adds processing steps. The middle area sho
 
 Batch Processing main interface. Configure steps on the left, view tasks in the middle, and inspect task details and previews on the right.
 
-![Batch Processing main interface](../../../assets/tutu-super-smart-tagger/user-guide/batch-processing/batch-processing-01.png)
+![Batch Processing main interface](../../../.gitbook/assets/batch-processing-01.png)
 
 ### Task Configuration, Monitoring, and Details
 
@@ -22,9 +22,9 @@ When Resize or Format, Rename Materials, or Detect Similar Images is selected, t
 
 The current interface provides three main steps by default:
 
-- Resize or Format
-- Rename Materials
-- Detect Similar Images
+* Resize or Format
+* Rename Materials
+* Detect Similar Images
 
 Dataset export is no longer shown as a normal default batch-processing step for regular users. Export image datasets from the corresponding image mode. Export video content from the video page or video detail page.
 
@@ -46,7 +46,7 @@ Before processing, you can view the estimated changes and confirm how many image
 
 Resize or Format step. Set target width, output format, quality, and small-image handling strategy.
 
-![Resize or Format step](../../../assets/tutu-super-smart-tagger/user-guide/batch-processing/batch-processing-02.png)
+![Resize or Format step](../../../.gitbook/assets/batch-processing-02.png)
 
 ### Resize or Format Parameters and Preview
 
@@ -82,7 +82,7 @@ If no similar images are detected, the preview area displays an empty result nor
 
 Detect Similar Images. Use it to find duplicate or similar materials and process them after confirmation.
 
-![Detect Similar Images](../../../assets/tutu-super-smart-tagger/user-guide/batch-processing/batch-processing-03.png)
+![Detect Similar Images](../../../.gitbook/assets/batch-processing-03.png)
 
 ### Similarity Threshold, Keep Strategy, and Preview
 

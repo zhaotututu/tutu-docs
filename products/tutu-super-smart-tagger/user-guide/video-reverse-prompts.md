@@ -18,7 +18,7 @@ Online videos are mainly read-only records. They are suitable for viewing genera
 
 Video Prompt Reverse Captioning list. Video cards show local or online source and generated-content status.
 
-![Video Prompt Reverse Captioning list](../../../assets/tutu-super-smart-tagger/user-guide/video-reverse-prompts/video-reverse-prompts-01.png)
+![Video Prompt Reverse Captioning list](../../../.gitbook/assets/video-reverse-prompts-01.png)
 
 ### Video List Selection and Preview Area
 
@@ -64,7 +64,7 @@ After an online video is added to the project, you can view video information an
 
 Link Online Video dialog. Paste a shared link and the system recognizes the online video source.
 
-![Link Online Video dialog](../../../assets/tutu-super-smart-tagger/user-guide/video-reverse-prompts/video-reverse-prompts-02.png)
+![Link Online Video dialog](../../../.gitbook/assets/video-reverse-prompts-02.png)
 
 ## Batch Prompt Reverse Captioning
 
@@ -76,7 +76,7 @@ After the batch task finishes, the detail and preview areas automatically focus 
 
 Batch Video Prompt Reverse Captioning settings. Generate scene descriptions, summaries, and spoken scripts as needed.
 
-![Batch Video Prompt Reverse Captioning settings](../../../assets/tutu-super-smart-tagger/user-guide/video-reverse-prompts/video-reverse-prompts-03.png)
+![Batch Video Prompt Reverse Captioning settings](../../../.gitbook/assets/video-reverse-prompts-03.png)
 
 ### Batch Reverse Range and Configuration
 
@@ -100,7 +100,7 @@ During export, check output directory permissions, disk space, and file-name con
 
 Video Batch Export dialog. Choose the export range and content to generate video materials.
 
-![Video Batch Export dialog](../../../assets/tutu-super-smart-tagger/user-guide/video-reverse-prompts/video-reverse-prompts-04.png)
+![Video Batch Export dialog](../../../.gitbook/assets/video-reverse-prompts-04.png)
 
 ### What Batch Export Actually Exports
 
@@ -120,7 +120,7 @@ This feature depends on local models and GPU. On first use, if the models are no
 
 Element Editing page. It is used for video-screen elements such as watermarks, subtitles, and fixed regions.
 
-![Element Editing page](../../../assets/tutu-super-smart-tagger/user-guide/video-reverse-prompts/video-reverse-prompts-05.png)
+![Element Editing page](../../../.gitbook/assets/video-reverse-prompts-05.png)
 
 ### Entry Conditions and Five-Step Flow
 

@@ -1,4 +1,4 @@
-# Tutu AIGC Toolbox Overview
+# Overview
 
 Tutu AIGC Toolbox is the public product and resource family around Zhaotutu's AIGC tools. It brings together utilities for captioning, dataset preparation, LoRA training, video prompt expansion, video publishing workflows, code backup, models, workflows, and learning resources.
 
@@ -12,16 +12,16 @@ Tutu Super Smart Tagger is an AI creation and material organization workspace.
 
 It is useful for:
 
-- Image prompt reverse captioning.
-- Natural-language image descriptions.
-- Paired image descriptions for LoRA training.
-- Batch captioning.
-- Video understanding.
-- Scene descriptions.
-- Summaries.
-- Spoken-script notes.
-- Element editing with local models.
-- Default AI, external API, and local model workflows.
+* Image prompt reverse captioning.
+* Natural-language image descriptions.
+* Paired image descriptions for LoRA training.
+* Batch captioning.
+* Video understanding.
+* Scene descriptions.
+* Summaries.
+* Spoken-script notes.
+* Element editing with local models.
+* Default AI, external API, and local model workflows.
 
 The V1.1.7 release added account login, account center, credits, subscription and device authorization visibility, invitation codes, transaction records, stronger default AI coverage, better video batch processing, online-video import, manual element selection, task-style model downloads, and language or theme system-following behavior.
 
@@ -31,13 +31,13 @@ TutuTrainer is a Windows application for LoRA model training and model workflow 
 
 It is useful for:
 
-- Dataset management.
-- Base model management.
-- Custom model configuration.
-- Training job management.
-- Automatic parameter recommendations.
-- Sampling, logs, and output management.
-- Image and video model training workflows supported by the installed version.
+* Dataset management.
+* Base model management.
+* Custom model configuration.
+* Training job management.
+* Automatic parameter recommendations.
+* Sampling, logs, and output management.
+* Image and video model training workflows supported by the installed version.
 
 ### Tutu Video Publisher
 
@@ -45,26 +45,26 @@ Tutu Video Publisher is a video publishing workflow assistant for platform accou
 
 It is useful for:
 
-- Managing multiple platform accounts.
-- Scheduling videos.
-- Generating platform-specific titles, descriptions, tags, and covers.
-- Monitoring publish state.
-- Controlling workflows through the local REST API while the app is running.
+* Managing multiple platform accounts.
+* Scheduling videos.
+* Generating platform-specific titles, descriptions, tags, and covers.
+* Monitoring publish state.
+* Controlling workflows through the local REST API while the app is running.
 
 ### Tutu Video Prompt Tool
 
 Tutu Video Prompt Tool V2.0 expands short ideas into richer prompts for text-to-video and image-to-video generation.
 
-![Tutu Video Prompt Tool interface](../../assets/tutu-aigc-toolbox/source/toolbox-01.png)
+![Tutu Video Prompt Tool interface](../../.gitbook/assets/toolbox-01.png)
 
 It is useful for:
 
-- Text-to-video prompt expansion.
-- Image-to-video prompt expansion.
-- Camera, lighting, motion, scene, and style enrichment.
-- Prompt history and library management.
-- Custom templates and default negative prompts.
-- Chinese and English interface switching.
+* Text-to-video prompt expansion.
+* Image-to-video prompt expansion.
+* Camera, lighting, motion, scene, and style enrichment.
+* Prompt history and library management.
+* Custom templates and default negative prompts.
+* Chinese and English interface switching.
 
 ### TuTu's Code Ark
 
@@ -72,13 +72,13 @@ TuTu's Code Ark is a free open-source automatic Git and GitHub backup tool desig
 
 It is useful for:
 
-- Automatic local Git initialization.
-- Automatic remote repository creation.
-- Interval or scheduled backup.
-- Tray-based background operation.
-- File-risk scanning before push.
-- Real-time logs.
-- Chinese and English interface support.
+* Automatic local Git initialization.
+* Automatic remote repository creation.
+* Interval or scheduled backup.
+* Tray-based background operation.
+* File-risk scanning before push.
+* Real-time logs.
+* Chinese and English interface support.
 
 See [TuTu's Code Ark](code-ark.md) for the full public guide.
 
@@ -118,8 +118,8 @@ https://zhaotutu.xyz
 
 Safety reminders:
 
-- Avoid unofficial installers and repackaged archives.
-- Keep API keys private.
-- Keep platform cookies and access tokens private.
-- Review AI-generated captions, summaries, titles, covers, and prompts before using them publicly.
-- For platform automation tools, follow each platform's rules and local laws.
+* Avoid unofficial installers and repackaged archives.
+* Keep API keys private.
+* Keep platform cookies and access tokens private.
+* Review AI-generated captions, summaries, titles, covers, and prompts before using them publicly.
+* For platform automation tools, follow each platform's rules and local laws.

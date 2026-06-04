@@ -1,26 +1,26 @@
-# Tutu Video Prompt Tool User Guide
+# User Guide
 
 Tutu Video Prompt Tool V2.0 is an AI video prompt expansion tool for text-to-video and image-to-video creation. It helps users turn short ideas into more complete prompts with subject, scene, camera, lighting, motion, style, and negative prompt guidance.
 
-![Tutu Video Prompt Tool main interface](../../assets/tutu-video-prompt-tool/user-guide/prompt-tool-user-guide-01.png)
+![Tutu Video Prompt Tool main interface](../../.gitbook/assets/prompt-tool-user-guide-01.png)
 
-![Prompt generation and library workflow](../../assets/tutu-video-prompt-tool/user-guide/prompt-tool-user-guide-02.png)
+![Prompt generation and library workflow](../../.gitbook/assets/prompt-tool-user-guide-02.png)
 
-![Settings and prompt management workflow](../../assets/tutu-video-prompt-tool/user-guide/prompt-tool-user-guide-03.png)
+![Settings and prompt management workflow](../../.gitbook/assets/prompt-tool-user-guide-03.png)
 
 ## Contact and Official Channels
 
-- Official website: https://zhaotutu.xyz
-- Bilibili: https://space.bilibili.com/431046154
-- Liblib: https://liblib.art/userpage/08e92accf66b9dd83b33d939fc8dc405/publish
-- V1.0 open-source page: https://github.com/zhaotututu/prompt-expander
-- Ko-fi: https://ko-fi.com/zhaotutu
+* Official website: https://zhaotutu.xyz
+* Bilibili: https://space.bilibili.com/431046154
+* Liblib: https://liblib.art/userpage/08e92accf66b9dd83b33d939fc8dc405/publish
+* V1.0 open-source page: https://github.com/zhaotututu/prompt-expander
+* Ko-fi: https://ko-fi.com/zhaotutu
 
 Community groups from the original Chinese guide:
 
-- QQ group 628266084
-- QQ group 950351015
-- QQ group 903753035
+* QQ group 628266084
+* QQ group 950351015
+* QQ group 903753035
 
 ## Product Introduction
 
@@ -30,54 +30,54 @@ Compared with V1.0, V2.0 upgrades the interface, prompt library, custom settings
 
 ## Main Features
 
-- Dual mode: text-to-video and image-to-video prompt expansion.
-- Style templates: standard, anime, cinematic, realistic, and other templates depending on version.
-- Prompt library: generated prompts are saved and categorized.
-- AI naming: generated prompts can receive meaningful names automatically.
-- Bilingual interface: Chinese and English UI can be switched.
-- Dark and light themes: choose the theme that fits your working environment.
-- Custom templates: create and save custom system prompt templates.
-- One-click apply: apply prompts from the library to the generator when supported by the installed version.
+* Dual mode: text-to-video and image-to-video prompt expansion.
+* Style templates: standard, anime, cinematic, realistic, and other templates depending on version.
+* Prompt library: generated prompts are saved and categorized.
+* AI naming: generated prompts can receive meaningful names automatically.
+* Bilingual interface: Chinese and English UI can be switched.
+* Dark and light themes: choose the theme that fits your working environment.
+* Custom templates: create and save custom system prompt templates.
+* One-click apply: apply prompts from the library to the generator when supported by the installed version.
 
 ## V2.0 Upgrade Highlights
 
 ### New User Interface
 
-- Redesigned layout for easier operation.
-- Dark and light theme support.
-- Better display on desktop and smaller screens.
-- Improved status prompts and error feedback.
+* Redesigned layout for easier operation.
+* Dark and light theme support.
+* Better display on desktop and smaller screens.
+* Improved status prompts and error feedback.
 
 ### Stronger Workflow Features
 
-- New prompt library.
-- Time and type classification.
-- Search for saved prompts.
-- AI automatic naming.
-- Custom templates for personalized workflows.
+* New prompt library.
+* Time and type classification.
+* Search for saved prompts.
+* AI automatic naming.
+* Custom templates for personalized workflows.
 
 ### Language and Experience Improvements
 
-- Full Chinese and English interface support.
-- Instant language switching.
-- Improved image upload and preview.
-- Better prompt editing and updating.
-- Clearer progress and status feedback.
+* Full Chinese and English interface support.
+* Instant language switching.
+* Improved image upload and preview.
+* Better prompt editing and updating.
+* Clearer progress and status feedback.
 
 ### Architecture Improvements
 
-- PyQt5-based interface for a smoother desktop experience.
-- Optimized API communication.
-- Improved error handling and recovery.
-- Safer local data storage and prompt management.
+* PyQt5-based interface for a smoother desktop experience.
+* Optimized API communication.
+* Improved error handling and recovery.
+* Safer local data storage and prompt management.
 
 ### New Settings
 
-- API key management.
-- Custom system prompt templates.
-- Default negative prompt settings.
-- Theme settings.
-- Saved language preferences.
+* API key management.
+* Custom system prompt templates.
+* Default negative prompt settings.
+* Theme settings.
+* Saved language preferences.
 
 ## Feature Details
 
@@ -97,20 +97,20 @@ Typical workflow:
 
 Style templates may include:
 
-- Standard.
-- Anime.
-- Cinematic.
-- Realistic.
+* Standard.
+* Anime.
+* Cinematic.
+* Realistic.
 
 Example short prompt:
 
-```text
+```
 a girl dancing
 ```
 
 Example expanded direction:
 
-```text
+```
 documentary photography style, a young East Asian girl wearing a flowing white dress dances in an open square at dusk, smooth medium-shot tracking movement, soft natural light, orange sunset background, hair and skirt moving naturally in the wind, graceful motion with strong visual rhythm
 ```
 
@@ -130,13 +130,13 @@ Typical workflow:
 
 The tool can help identify:
 
-- Subject characteristics.
-- Colors.
-- Composition.
-- Visual style.
-- Lighting.
-- Elements that should remain consistent.
-- Motion or camera direction suitable for video generation.
+* Subject characteristics.
+* Colors.
+* Composition.
+* Visual style.
+* Lighting.
+* Elements that should remain consistent.
+* Motion or camera direction suitable for video generation.
 
 For example, after uploading an anime character image, the generated prompt may include anime rendering, cel-shading, light effects, and motion details.
 
@@ -146,15 +146,15 @@ The prompt library stores generated prompts for reuse.
 
 Supported behavior:
 
-- Automatically save generated prompts.
-- Browse by date: today, this week, this month, and all.
-- Browse by type: text-to-video, image-to-video, and subcategories.
-- Search for specific prompts.
-- View saved prompts.
-- Edit and update saved prompts.
-- Delete prompts that are no longer useful.
-- Preview the original image for image-to-video records.
-- Apply a saved prompt back to the generator when supported.
+* Automatically save generated prompts.
+* Browse by date: today, this week, this month, and all.
+* Browse by type: text-to-video, image-to-video, and subcategories.
+* Search for specific prompts.
+* View saved prompts.
+* Edit and update saved prompts.
+* Delete prompts that are no longer useful.
+* Preview the original image for image-to-video records.
+* Apply a saved prompt back to the generator when supported.
 
 Use the library to compare which prompt structures actually worked with your target video model.
 
@@ -162,20 +162,20 @@ Use the library to compare which prompt structures actually worked with your tar
 
 The settings page can include:
 
-- Language: switch between Chinese and English.
-- Theme: switch between dark and light themes.
-- API key management: configure and save your model service API key.
-- Template management: create, edit, and restore system prompt templates.
-- Negative prompt: customize the default negative prompt.
+* Language: switch between Chinese and English.
+* Theme: switch between dark and light themes.
+* API key management: configure and save your model service API key.
+* Template management: create, edit, and restore system prompt templates.
+* Negative prompt: customize the default negative prompt.
 
 ## Install and Use
 
 ### System Requirements
 
-- Windows 10 or Windows 11.
-- At least 2 GB free disk space.
-- Network access for API calls.
-- A DashScope API key or the API key required by the installed version.
+* Windows 10 or Windows 11.
+* At least 2 GB free disk space.
+* Network access for API calls.
+* A DashScope API key or the API key required by the installed version.
 
 The normal installer does not require Python knowledge, code setup, or manual environment configuration.
 
@@ -224,12 +224,12 @@ Yes, for workflows that call an external model service. Some providers may offer
 
 Try:
 
-- Lowering or raising creativity parameters.
-- Switching style templates.
-- Simplifying the input prompt.
-- Adding clearer subject or motion guidance.
-- Editing the generated result manually before use.
-- Testing the same prompt in your target video model.
+* Lowering or raising creativity parameters.
+* Switching style templates.
+* Simplifying the input prompt.
+* Adding clearer subject or motion guidance.
+* Editing the generated result manually before use.
+* Testing the same prompt in your target video model.
 
 ### The prompt is too long for my video model.
 
@@ -247,9 +247,9 @@ Yes. Save useful prompts and organize them by time, type, or project. Keeping a 
 
 The original V2.0 guide mentions ongoing improvements, including:
 
-- Support for more AI service providers.
-- More local model options.
-- Continued UI and workflow refinements.
+* Support for more AI service providers.
+* More local model options.
+* Continued UI and workflow refinements.
 
 ## License
 
@@ -263,6 +263,6 @@ The project is actively maintained. If you encounter bugs, contact Zhaotutu thro
 
 Thanks to:
 
-- Users who provided feedback.
-- Contributors who helped improve the tool.
-- The Qwen model team for the underlying AI model capabilities used by the original workflow.
+* Users who provided feedback.
+* Contributors who helped improve the tool.
+* The Qwen model team for the underlying AI model capabilities used by the original workflow.

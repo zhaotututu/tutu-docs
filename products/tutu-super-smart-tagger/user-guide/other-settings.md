@@ -1,4 +1,4 @@
-# System Configuration: Other Settings
+# Other Settings
 
 ## Page Location
 
@@ -24,7 +24,7 @@ Other Settings no longer contains a separate theme selection card. Light, Dark, 
 
 Other Settings. Language, theme behavior, model storage, and data paths are configured here.
 
-![Other Settings](../../../assets/tutu-super-smart-tagger/user-guide/other-settings/other-settings-01.png)
+![Other Settings](../../../.gitbook/assets/other-settings-01.png)
 
 ## Translation Service
 
@@ -58,7 +58,7 @@ The How to Move Ollama entry opens the full operation guide. Before migration, d
 
 Model Storage Management. View external model directory, video editing model directory, installation directory, total model usage, and disk space. Specific model download, pause, and test operations are handled in Built-in Model Configuration.
 
-![Model Storage Management](../../../assets/tutu-super-smart-tagger/user-guide/other-settings/other-settings-02.png)
+![Model Storage Management](../../../.gitbook/assets/other-settings-02.png)
 
 ## Data Storage Management
 
@@ -80,7 +80,7 @@ System files and smart-pairing models are runtime dependencies. The page disable
 
 Data Storage Management. View disk usage for videos, thumbnails, keyframes, database, logs, and related data.
 
-![Data Storage Management](../../../assets/tutu-super-smart-tagger/user-guide/other-settings/other-settings-03.png)
+![Data Storage Management](../../../.gitbook/assets/other-settings-03.png)
 
 ## Disk Health Check
 

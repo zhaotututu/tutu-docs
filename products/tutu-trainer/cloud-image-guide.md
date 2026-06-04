@@ -1,4 +1,4 @@
-# TutuTrainer Cloud Image Guide
+# Cloud Image Guide
 
 This guide explains how to use TutuTrainer in a cloud GPU image or mirrored Windows environment. It covers the same core training workflow as the desktop guide, with extra attention to cloud paths, uploaded datasets, model storage, output download, and cost control.
 
@@ -6,16 +6,16 @@ Use this guide when your local PC is not strong enough for the selected model fa
 
 ## Contents
 
-- [Quick Start](#quick-start)
-- [System Requirements](#system-requirements)
-- [Cloud Environment Notes](#cloud-environment-notes)
-- [Interface Overview](#interface-overview)
-- [Training Dashboard](#training-dashboard)
-- [Dataset Management](#dataset-management)
-- [Base Model Management](#base-model-management)
-- [FAQ](#faq)
-- [Best Practices](#best-practices)
-- [Appendix](#appendix)
+* [Quick Start](cloud-image-guide.md#quick-start)
+* [System Requirements](cloud-image-guide.md#system-requirements)
+* [Cloud Environment Notes](cloud-image-guide.md#cloud-environment-notes)
+* [Interface Overview](cloud-image-guide.md#interface-overview)
+* [Training Dashboard](cloud-image-guide.md#training-dashboard)
+* [Dataset Management](cloud-image-guide.md#dataset-management)
+* [Base Model Management](cloud-image-guide.md#base-model-management)
+* [FAQ](cloud-image-guide.md#faq)
+* [Best Practices](cloud-image-guide.md#best-practices)
+* [Appendix](cloud-image-guide.md#appendix)
 
 ## Quick Start
 
@@ -27,34 +27,34 @@ Use this guide when your local PC is not strong enough for the selected model fa
 4. Open path settings from the training dashboard.
 5. Configure dataset, model, and output folders for the cloud disk layout.
 
-![Cloud path settings](../../assets/tutu-trainer/cloud-image-guide/cloud-image-guide-01.png)
+![Cloud path settings](../../.gitbook/assets/cloud-image-guide-01.png)
 
 Cloud paths are often different from your local PC. Always confirm paths before uploading data or starting a job.
 
-| Path | What to check in a cloud image |
-| --- | --- |
-| Dataset folder | The folder where uploaded or mounted datasets will appear. |
-| Model folder | The folder where downloaded or preloaded base models are stored. |
-| Output folder | The folder you must download from before shutting down the instance. |
+| Path           | What to check in a cloud image                                       |
+| -------------- | -------------------------------------------------------------------- |
+| Dataset folder | The folder where uploaded or mounted datasets will appear.           |
+| Model folder   | The folder where downloaded or preloaded base models are stored.     |
+| Output folder  | The folder you must download from before shutting down the instance. |
 
 ### Step 2: Prepare or Upload the Dataset
 
 Open Dataset Management and create or select the dataset you want to train.
 
-![Dataset management in a cloud environment](../../assets/tutu-trainer/cloud-image-guide/cloud-image-guide-02.png)
+![Dataset management in a cloud environment](../../.gitbook/assets/cloud-image-guide-02.png)
 
 Then open the dataset detail page and confirm that images and captions are visible.
 
-![Dataset detail page](../../assets/tutu-trainer/cloud-image-guide/cloud-image-guide-03.png)
+![Dataset detail page](../../.gitbook/assets/cloud-image-guide-03.png)
 
 Each image should have a matching `.txt` caption file. If the dataset was uploaded as an archive, extract it before scanning.
 
 For large datasets:
 
-- Compress before upload when possible.
-- Avoid duplicate files.
-- Keep a local backup.
-- Confirm the cloud disk has enough free space after extraction.
+* Compress before upload when possible.
+* Avoid duplicate files.
+* Keep a local backup.
+* Confirm the cloud disk has enough free space after extraction.
 
 ### Step 3: Configure and Start Training
 
@@ -71,7 +71,7 @@ TutuTrainer automatically calculates recommended training settings based on the 
 
 Watch training progress, samples, logs, and GPU usage.
 
-![Training progress in the cloud image](../../assets/tutu-trainer/cloud-image-guide/cloud-image-guide-04.png)
+![Training progress in the cloud image](../../.gitbook/assets/cloud-image-guide-04.png)
 
 After training finishes:
 
@@ -88,20 +88,20 @@ Cloud instances still need enough GPU memory, system memory, disk space, and dri
 
 ### VRAM and Memory Guidance by Model
 
-| Model family | Approximate VRAM | Approximate system memory | Typical GPU guidance |
-| --- | --- | --- | --- |
-| SD 1.5 | About 10 GB | Lower | RTX 3060 or better |
-| SDXL | About 16 GB | About 16 GB | RTX 4070 or better |
-| FLUX.1-dev | About 32 GB | 30 GB+ | RTX 5090 class |
-| Qwen-Image | About 32 GB | 70 GB+ | RTX 5090 class with high system memory |
-| Qwen-Image-Edit | About 32 GB | About 96 GB | RTX 5090 class with high system memory |
-| Wan 2.2 5B (TI2V) | About 16 GB | About 64 GB | RTX 4070 or better |
-| Wan 2.2 14B (T2V/I2V) | About 32 GB | About 96 GB | RTX 5090 or professional 24 GB+ GPU |
-| FLUX Kontext | About 32 GB | About 50 GB | RTX 5090 or professional 24 GB+ GPU |
-| LTX 2 | About 32 GB | About 64 GB | RTX 5090 class |
-| FLUX2 Klein 4B | About 16 GB | About 64 GB | RTX 4070, RTX 4090, or RTX 5090 |
-| FLUX2 Klein 9B | About 24 GB | About 64 GB | RTX 4090 or RTX 5090 |
-| ERNIE-Image | About 24 GB | About 24 GB | RTX 3090 or better |
+| Model family          | Approximate VRAM | Approximate system memory | Typical GPU guidance                   |
+| --------------------- | ---------------- | ------------------------- | -------------------------------------- |
+| SD 1.5                | About 10 GB      | Lower                     | RTX 3060 or better                     |
+| SDXL                  | About 16 GB      | About 16 GB               | RTX 4070 or better                     |
+| FLUX.1-dev            | About 32 GB      | 30 GB+                    | RTX 5090 class                         |
+| Qwen-Image            | About 32 GB      | 70 GB+                    | RTX 5090 class with high system memory |
+| Qwen-Image-Edit       | About 32 GB      | About 96 GB               | RTX 5090 class with high system memory |
+| Wan 2.2 5B (TI2V)     | About 16 GB      | About 64 GB               | RTX 4070 or better                     |
+| Wan 2.2 14B (T2V/I2V) | About 32 GB      | About 96 GB               | RTX 5090 or professional 24 GB+ GPU    |
+| FLUX Kontext          | About 32 GB      | About 50 GB               | RTX 5090 or professional 24 GB+ GPU    |
+| LTX 2                 | About 32 GB      | About 64 GB               | RTX 5090 class                         |
+| FLUX2 Klein 4B        | About 16 GB      | About 64 GB               | RTX 4070, RTX 4090, or RTX 5090        |
+| FLUX2 Klein 9B        | About 24 GB      | About 64 GB               | RTX 4090 or RTX 5090                   |
+| ERNIE-Image           | About 24 GB      | About 24 GB               | RTX 3090 or better                     |
 
 The actual requirement can change with dataset size, image resolution, model format, training method, and background processes.
 
@@ -111,11 +111,11 @@ The actual requirement can change with dataset size, image resolution, model for
 
 Consider cloud GPU training when:
 
-- Your local GPU runs out of VRAM.
-- Your local system memory is not enough for the selected model.
-- Training is too slow on your PC.
-- You want to test a large model family without upgrading local hardware.
-- You need a clean environment that can be recreated.
+* Your local GPU runs out of VRAM.
+* Your local system memory is not enough for the selected model.
+* Training is too slow on your PC.
+* You want to test a large model family without upgrading local hardware.
+* You need a clean environment that can be recreated.
 
 ### Cost Control
 
@@ -135,11 +135,11 @@ Treat third-party cloud machines as shared or temporary environments unless you 
 
 Avoid storing:
 
-- Private API keys.
-- Browser cookies.
-- Personal account files.
-- Payment information.
-- Unreleased customer data.
+* Private API keys.
+* Browser cookies.
+* Personal account files.
+* Payment information.
+* Unreleased customer data.
 
 If you must use sensitive material, use a trusted provider and remove the files after the job is complete.
 
@@ -149,12 +149,12 @@ TutuTrainer uses the same main pages in local and cloud environments.
 
 ### Training Dashboard
 
-| Area | Purpose |
-| --- | --- |
-| Job configuration | Choose model, dataset, prompts, and training workflow. |
-| Resource monitor | Watch CPU, system memory, GPU usage, VRAM, temperature, clocks, and power. |
-| Active jobs | View running jobs and stop a job if needed. |
-| Model output | Find completed LoRA files and output folders. |
+| Area              | Purpose                                                                    |
+| ----------------- | -------------------------------------------------------------------------- |
+| Job configuration | Choose model, dataset, prompts, and training workflow.                     |
+| Resource monitor  | Watch CPU, system memory, GPU usage, VRAM, temperature, clocks, and power. |
+| Active jobs       | View running jobs and stop a job if needed.                                |
+| Model output      | Find completed LoRA files and output folders.                              |
 
 ### Dataset Management
 
@@ -162,10 +162,10 @@ Use this page to create, scan, inspect, and edit datasets.
 
 Cloud-specific checks:
 
-- The dataset folder must be on a mounted or local cloud disk.
-- Uploaded archives must be extracted.
-- Captions must be copied together with images.
-- The app must scan the same dataset root you uploaded into.
+* The dataset folder must be on a mounted or local cloud disk.
+* Uploaded archives must be extracted.
+* Captions must be copied together with images.
+* The app must scan the same dataset root you uploaded into.
 
 ### Base Model Management
 
@@ -173,10 +173,10 @@ Use this page to scan, download, configure, and register base models.
 
 Cloud-specific checks:
 
-- Confirm the model folder is on a disk with enough space.
-- Keep preloaded model folders intact.
-- Refresh after moving, extracting, or mounting models.
-- Download required model files before starting the paid training run if possible.
+* Confirm the model folder is on a disk with enough space.
+* Keep preloaded model folders intact.
+* Refresh after moving, extracting, or mounting models.
+* Download required model files before starting the paid training run if possible.
 
 ## Training Dashboard
 
@@ -184,32 +184,32 @@ Cloud-specific checks:
 
 In a cloud image, model source choices usually mean:
 
-| Source | Cloud usage |
-| --- | --- |
-| Automatic download | Useful when the cloud image has internet access and model downloads are allowed. |
-| Local model | Use when the model is already preloaded in the cloud image or extracted into the model folder. |
-| Custom model | Use when the model is on a mounted drive or a non-standard path. |
+| Source             | Cloud usage                                                                                    |
+| ------------------ | ---------------------------------------------------------------------------------------------- |
+| Automatic download | Useful when the cloud image has internet access and model downloads are allowed.               |
+| Local model        | Use when the model is already preloaded in the cloud image or extracted into the model folder. |
+| Custom model       | Use when the model is on a mounted drive or a non-standard path.                               |
 
 ### Supported Model Architectures
 
 Image model families include:
 
-- FLUX.1 and FLUX.1-dev.
-- FLUX.1-Kontext-dev.
-- Qwen-Image.
-- Qwen-Image-Edit variants supported by your installed version.
-- Stable Diffusion 1.5.
-- Stable Diffusion XL.
-- Z-Image family.
-- FLUX2 Klein family.
-- ERNIE-Image.
+* FLUX.1 and FLUX.1-dev.
+* FLUX.1-Kontext-dev.
+* Qwen-Image.
+* Qwen-Image-Edit variants supported by your installed version.
+* Stable Diffusion 1.5.
+* Stable Diffusion XL.
+* Z-Image family.
+* FLUX2 Klein family.
+* ERNIE-Image.
 
 Video model families include:
 
-- Wan 2.2 T2V 14B.
-- Wan 2.2 I2V 14B.
-- Wan 2.2 TI2V 5B.
-- LTX 2 19B.
+* Wan 2.2 T2V 14B.
+* Wan 2.2 I2V 14B.
+* Wan 2.2 TI2V 5B.
+* LTX 2 19B.
 
 Use the in-app selector as the final source of truth because the supported list can change by version.
 
@@ -217,12 +217,12 @@ Use the in-app selector as the final source of truth because the supported list 
 
 For cloud usage, the best model is not always the largest model. Balance output quality, training time, hourly cost, and download size.
 
-| Goal | Practical direction |
-| --- | --- |
-| Fast test | SD 1.5, SDXL, or a lower-memory model. |
+| Goal                    | Practical direction                                                |
+| ----------------------- | ------------------------------------------------------------------ |
+| Fast test               | SD 1.5, SDXL, or a lower-memory model.                             |
 | High-quality image LoRA | Use the model family that matches your target generation workflow. |
-| Chinese prompt workflow | Qwen-Image or Z-Image may fit better. |
-| Video LoRA | Use a matching video model and expect high time and storage cost. |
+| Chinese prompt workflow | Qwen-Image or Z-Image may fit better.                              |
+| Video LoRA              | Use a matching video model and expect high time and storage cost.  |
 
 ### Sample Prompts
 
@@ -230,21 +230,21 @@ Use sample prompts to monitor training quality without leaving the cloud app.
 
 Good sample prompts:
 
-- Reflect your final use case.
-- Include one simple prompt and one more demanding prompt.
-- Avoid adding too many unrelated elements.
-- Stay consistent across checkpoints so comparison is meaningful.
+* Reflect your final use case.
+* Include one simple prompt and one more demanding prompt.
+* Avoid adding too many unrelated elements.
+* Stay consistent across checkpoints so comparison is meaningful.
 
 ### Resource Monitor
 
 Cloud providers may expose different GPU names and driver states. Watch:
 
-- VRAM usage.
-- GPU load.
-- Temperature.
-- System memory.
-- Disk space.
-- Training speed.
+* VRAM usage.
+* GPU load.
+* Temperature.
+* System memory.
+* Disk space.
+* Training speed.
 
 If VRAM is full and speed is extremely slow, the model may be beyond the practical limit of the selected instance.
 
@@ -252,11 +252,11 @@ If VRAM is full and speed is extremely slow, the model may be beyond the practic
 
 Before shutting down the instance, collect:
 
-- Final LoRA checkpoint files.
-- Intermediate checkpoints worth testing.
-- Sample images.
-- Training logs.
-- Config files.
+* Final LoRA checkpoint files.
+* Intermediate checkpoints worth testing.
+* Sample images.
+* Training logs.
+* Config files.
 
 Keep at least one copy on your local machine or permanent storage.
 
@@ -278,7 +278,7 @@ Common workflow:
 
 Recommended structure:
 
-```text
+```
 datasets/
 |-- my_character/
 |   |-- image001.jpg
@@ -293,7 +293,7 @@ Avoid deeply nested folders unless the app version explicitly supports them.
 
 Captions should use the same base filename as the image.
 
-```text
+```
 sample_001.png
 sample_001.txt
 ```
@@ -362,13 +362,13 @@ Stop the job and start it again. If it repeats, check VRAM, system memory, Windo
 
 This is normal for some backend training processes. Minimize it and let the training continue.
 
-![Backend console window](../../assets/tutu-trainer/cloud-image-guide/cloud-image-guide-05.png)
+![Backend console window](../../.gitbook/assets/cloud-image-guide-05.png)
 
 #### What is separated format?
 
 Separated format is the standard folder-style model layout with multiple model components.
 
-![Separated model format example](../../assets/tutu-trainer/cloud-image-guide/cloud-image-guide-06.png)
+![Separated model format example](../../.gitbook/assets/cloud-image-guide-06.png)
 
 #### What is merged format?
 
@@ -378,7 +378,7 @@ If a merged custom model is supported, TutuTrainer may convert it to a separated
 
 After conversion, the app may show an associated model entry. Training uses the associated converted model while the original file remains unchanged.
 
-![Associated model after conversion](../../assets/tutu-trainer/cloud-image-guide/cloud-image-guide-07.png)
+![Associated model after conversion](../../.gitbook/assets/cloud-image-guide-07.png)
 
 #### Training is slow in the cloud.
 
@@ -417,7 +417,7 @@ Large model files can take a long time to move, copy, or extract. Video model fo
 
 Use matching filenames:
 
-```text
+```
 image1.jpg
 image1.txt
 ```
@@ -455,7 +455,7 @@ image1.txt
 
 The exact layout depends on the cloud image, but a practical structure is:
 
-```text
+```
 TutuTrainer/
 |-- TutuTrainer.exe
 |-- backend/
@@ -483,6 +483,6 @@ If something does not appear in the app:
 
 Use the in-app icons when available:
 
-- Bilibili tutorials.
-- Ko-fi support.
-- YouTube channel.
+* Bilibili tutorials.
+* Ko-fi support.
+* YouTube channel.

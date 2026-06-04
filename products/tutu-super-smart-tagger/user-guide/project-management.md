@@ -16,7 +16,7 @@ The feature-data area shows whether the project already contains prompt tags, de
 
 Project list. The current project, project path, feature data, and action buttons are shown together on the Project Management page.
 
-![Project list](../../../assets/tutu-super-smart-tagger/user-guide/project-management/project-management-01.png)
+![Project list](../../../.gitbook/assets/project-management-01.png)
 
 ### Feature Data Markers
 
@@ -29,18 +29,14 @@ If the page says that no reverse-prompt data exists, the project currently has n
 ## Create a New Project
 
 1. Click New Project in the upper-right corner.
-
 2. Enter a project name. The name should reflect the material topic or training purpose.
-
 3. The description is optional. Use it to record the material source, dataset purpose, processing requirements, or notes.
-
 4. You can manually choose the storage location. If left empty, the backend uses the default project directory.
-
 5. After creation, return to the project list and click the project to make it the current project.
 
 New Project dialog. Fill in the name, description, and storage location to create the project.
 
-![New Project dialog](../../../assets/tutu-super-smart-tagger/user-guide/project-management/project-management-02.png)
+![New Project dialog](../../../.gitbook/assets/project-management-02.png)
 
 ## Import a Labeled Dataset
 
@@ -54,7 +50,7 @@ If you are starting from scratch with image reverse prompts, natural-language de
 
 Import Labeled Dataset. Use it only when you want to continue editing an old dataset. First-time users usually do not need it.
 
-![Import Labeled Dataset](../../../assets/tutu-super-smart-tagger/user-guide/project-management/project-management-03.png)
+![Import Labeled Dataset](../../../.gitbook/assets/project-management-03.png)
 
 ### Save Location and Progress After Import
 

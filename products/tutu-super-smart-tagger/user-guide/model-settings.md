@@ -1,4 +1,4 @@
-# System Configuration: Model Settings
+# Model Settings
 
 ## Page Location
 
@@ -24,7 +24,7 @@ Failure handling is divided into three categories: image and reference reverse c
 
 Default Mode model configuration. Regular users can keep Default Mode to use credits and default AI.
 
-![Default Mode model configuration](../../../assets/tutu-super-smart-tagger/user-guide/model-settings/model-settings-01.png)
+![Default Mode model configuration](../../../.gitbook/assets/model-settings-01.png)
 
 ## Advanced Mode
 
@@ -56,7 +56,7 @@ The bottom connection status is used to test whether the model service is availa
 
 Built-in Model Configuration. Manage local or built-in model status, paths, and downloads.
 
-![Built-in Model Configuration](../../../assets/tutu-super-smart-tagger/user-guide/model-settings/model-settings-02.png)
+![Built-in Model Configuration](../../../.gitbook/assets/model-settings-02.png)
 
 ## External Model Configuration
 
@@ -84,4 +84,4 @@ Capability icons on model cards identify visual understanding, image generation,
 
 External Model Configuration. Advanced users can manage providers, API keys, and the model library.
 
-![External Model Configuration](../../../assets/tutu-super-smart-tagger/user-guide/model-settings/model-settings-03.png)
+![External Model Configuration](../../../.gitbook/assets/model-settings-03.png)

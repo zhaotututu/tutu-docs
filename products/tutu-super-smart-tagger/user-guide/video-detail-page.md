@@ -26,7 +26,7 @@ The timeline supports playback preview, clip order adjustment, trimming, splitti
 
 Video detail page. Video, clip timeline, keyframes, and AI content are organized on one page.
 
-![Video detail page](../../../assets/tutu-super-smart-tagger/user-guide/video-detail-page/video-detail-page-01.png)
+![Video detail page](../../../.gitbook/assets/video-detail-page-01.png)
 
 ### Clip List Selection and File Operations
 
@@ -62,16 +62,16 @@ Export to Clip List creates the selected timeline clips back into the left clip 
 
 Built-in timeline shortcuts:
 
-- Ctrl+Z and Ctrl+Y: undo and redo.
-- Ctrl+A: select all.
-- Esc: cancel selection.
-- Ctrl+C, Ctrl+X, Ctrl+V: copy, cut, paste.
-- Delete: delete.
-- Ctrl+S: split.
-- Ctrl+M: merge.
-- Ctrl+E: export.
-- Space: play or pause.
-- Left and right arrow keys: move the playhead.
+* Ctrl+Z and Ctrl+Y: undo and redo.
+* Ctrl+A: select all.
+* Esc: cancel selection.
+* Ctrl+C, Ctrl+X, Ctrl+V: copy, cut, paste.
+* Delete: delete.
+* Ctrl+S: split.
+* Ctrl+M: merge.
+* Ctrl+E: export.
+* Space: play or pause.
+* Left and right arrow keys: move the playhead.
 
 ## AI Content Generation
 
