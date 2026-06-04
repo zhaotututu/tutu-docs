@@ -54,15 +54,13 @@ If the UI cannot see your datasets or models, check these paths first. Most "not
 
 ### Step 2: Prepare a Dataset
 
-1. Open Dataset Management from the top navigation.
+1. Open Dataset Manager from the top navigation.
 2. Create a new dataset with a clear name.
 3. Enter the dataset detail page.
 4. Add image files to the dataset.
 5. Write or import a caption file for each image.
 
-![Dataset list and dataset creation](../../.gitbook/assets/overview-04.png)
-
-![Dataset detail page with image cards](../../.gitbook/assets/overview-02.png)
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 Each training image should have a matching caption. TutuTrainer saves captions as `.txt` files with the same base filename as the image.
 
