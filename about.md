@@ -1,74 +1,94 @@
 # About Zhaotutu
 
-Zhaotutu is an independent AIGC creator and software developer focused on image generation, video generation, dataset preparation, LoRA training, creator workflows, and practical desktop tools.
+Zhaotutu is a solo AIGC creator. The Tutu products are one-person projects built and maintained by Zhaotutu with AI-assisted development, not by a company or a large team.
 
-GitHub:
-
-https://github.com/zhaotututu
+These tools come from real AIGC work: making models, preparing datasets, captioning images and videos, training LoRAs, testing workflows, and publishing creator content. The goal is simple: turn repeated creator pain points into practical desktop tools that normal users can actually use.
 
 Official website:
 
 https://zhaotutu.xyz
 
-## Creator Profile
+GitHub:
 
-The original Chinese profile describes Zhaotutu as:
+https://github.com/zhaotututu
 
-* An AIGC creator active since 2022.
-* An independent developer.
-* A creator of more than one hundred public AIGC models and related resources.
-* A long-term clothing-category creator on Civitai with high historical ranking.
-* A creator whose public models have been downloaded or used more than one million times.
-* A creator with long-running accounts on Bilibili, Douyin, Kuaishou, YouTube, and other platforms.
-* A self-media creator with about 100,000 total followers across platforms.
+## Why Users Can Trust This Work
 
-## Public Tools
+Zhaotutu has been active in the AIGC field since 2022.
 
-Zhaotutu independently develops practical AIGC tools, including:
+Public track record:
 
-* Tutu Super Smart Tagger.
-* TutuTrainer.
-* Tutu Video Publisher.
-* Tutu Video Prompt Tool.
-* TuTu's Code Ark.
-* Workflows, nodes, and related AIGC utilities.
+* Published more than 100 AIGC models, workflows, and related resources.
+* Long-term creator on Civitai, with strong historical ranking in the clothing category.
+* Public models have reached more than one million downloads or uses.
+* Maintains creator accounts on Bilibili, Douyin, Kuaishou, YouTube, and other platforms.
+* Has about 100,000 followers across public creator channels.
 
-Tutu Super Smart Tagger is described in the original source as a full-featured AIGC workspace with more than 350,000 lines of code and broad image/video material organization features.
+This matters because the tools are not built from abstract product guesses. They are built from daily AIGC production problems: messy datasets, weak captions, model training setup, video understanding, prompt expansion, and publishing workflow friction.
 
-TutuTrainer is a model fine-tuning tool for LoRA and related model workflows, with local and cloud-oriented usage paths.
+## What Zhaotutu Builds
 
-## Public Scope
+### Tutu Super Smart Tagger
 
-This documentation focuses on end-user operation and public product information.
+An AI workspace for image and video captioning, dataset preparation, video understanding, batch processing, creative workflows, and local or custom model configuration.
 
-It does not publish:
+It is designed for users who need to organize training material, generate better captions, understand video content, or prepare LoRA datasets faster.
 
-* Private source code.
-* Internal implementation details.
-* Private credentials.
-* Internal service keys.
-* Unreleased planning notes.
-* Private customer or account data.
+### TutuTrainer
 
-## Source Screenshots
+A Windows application for LoRA training and model workflow management.
 
-The original Chinese profile includes proof screenshots and product or model screenshots. They are preserved here as source evidence images. Some screenshots contain Chinese UI or Chinese platform content because they come from the original Chinese source material.
+It is designed to reduce environment setup work and help users train models through a visual workflow instead of command-line configuration.
 
-![Public profile screenshot 1](.gitbook/assets/about-01.png)
+### Tutu Video Publisher
 
-![Public profile screenshot 2](.gitbook/assets/about-02.png)
+A video publishing workflow assistant for platform accounts, scheduled publishing, AI-assisted titles, descriptions, tags, covers, and local API automation.
 
-![Public ranking or platform screenshot 1](.gitbook/assets/about-03.png)
+It is designed for creators who publish videos repeatedly and need a more organized publishing workflow.
 
-![Public ranking or platform screenshot 2](.gitbook/assets/about-04.png)
+### Tutu Video Prompt Tool
 
-![Public platform screenshot](.gitbook/assets/about-05.png)
+A prompt expansion tool for text-to-video and image-to-video generation.
 
-![Mobile screenshot 1](.gitbook/assets/about-06.jpg)
+It helps users turn short ideas into more complete prompts with scene, camera, lighting, motion, and style details.
 
-![Mobile screenshot 2](.gitbook/assets/about-07.png)
+### TuTu's Code Ark
 
-![Mobile screenshot 3](.gitbook/assets/about-08.png)
+A free open-source automatic Git and GitHub backup tool.
+
+It is designed for AI-assisted coding beginners and solo developers who want code backup without learning a complex Git workflow first.
+
+## Product Philosophy
+
+Tutu tools are built around practical use, not presentation polish alone.
+
+The priorities are:
+
+* Make complex AIGC workflows easier to start.
+* Keep normal users away from unnecessary environment setup.
+* Provide useful defaults before exposing advanced settings.
+* Support both Chinese and English users where the product workflow allows it.
+* Keep improving from real user feedback and real creator work.
+
+## Public Proof
+
+The images below show public profiles, platform records, model pages, product materials, and related creator evidence. Some screenshots contain Chinese interface text because they come from public Chinese platforms.
+
+![Public creator profile](.gitbook/assets/about-01.png)
+
+![Public platform record](.gitbook/assets/about-02.png)
+
+![Public ranking screenshot](.gitbook/assets/about-03.png)
+
+![Public ranking detail](.gitbook/assets/about-04.png)
+
+![Creator channel screenshot](.gitbook/assets/about-05.png)
+
+![Mobile platform screenshot 1](.gitbook/assets/about-06.jpg)
+
+![Mobile platform screenshot 2](.gitbook/assets/about-07.png)
+
+![Mobile platform screenshot 3](.gitbook/assets/about-08.png)
 
 ![Model or workflow screenshot 1](.gitbook/assets/about-09.jpg)
 
@@ -80,7 +100,7 @@ The original Chinese profile includes proof screenshots and product or model scr
 
 Use the official website and in-app feedback channels first.
 
-Public contact information from the original Chinese materials:
+Public contact:
 
 * QQ: 331506796
 * WeChat: tujiang0411
