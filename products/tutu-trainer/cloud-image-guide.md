@@ -45,7 +45,7 @@ Open Dataset Management and create or select the dataset you want to train.
 
 Then open the dataset detail page and confirm that images and captions are visible.
 
-![Dataset detail page](../../.gitbook/assets/cloud-image-guide-03.png)
+![Dataset detail page](../../.gitbook/assets/user-guide-01.png)
 
 Each image should have a matching `.txt` caption file. If the dataset was uploaded as an archive, extract it before scanning.
 
@@ -362,13 +362,13 @@ Stop the job and start it again. If it repeats, check VRAM, system memory, Windo
 
 This is normal for some backend training processes. Minimize it and let the training continue.
 
-![Backend console window](../../.gitbook/assets/cloud-image-guide-05.png)
+![Backend console window](../../.gitbook/assets/overview-04.png)
 
 #### What is separated format?
 
 Separated format is the standard folder-style model layout with multiple model components.
 
-![Separated model format example](../../.gitbook/assets/cloud-image-guide-06.png)
+![Separated model format example](../../.gitbook/assets/overview-02.png)
 
 #### What is merged format?
 
@@ -378,7 +378,7 @@ If a merged custom model is supported, TutuTrainer may convert it to a separated
 
 After conversion, the app may show an associated model entry. Training uses the associated converted model while the original file remains unchanged.
 
-![Associated model after conversion](../../.gitbook/assets/cloud-image-guide-07.png)
+![Associated model after conversion](../../.gitbook/assets/user-guide-04.png)
 
 #### Training is slow in the cloud.
 

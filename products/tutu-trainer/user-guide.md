@@ -40,7 +40,7 @@ You can start a first LoRA training run in a few minutes once your paths, datase
 4. Configure the dataset folder, model folder, and training output folder.
 5. Save the path settings before creating or scanning datasets.
 
-![Path settings on the training dashboard](../../.gitbook/assets/user-guide-01.png)
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 Recommended path roles:
 
@@ -60,9 +60,9 @@ If the UI cannot see your datasets or models, check these paths first. Most "not
 4. Add image files to the dataset.
 5. Write or import a caption file for each image.
 
-![Dataset list and dataset creation](../../.gitbook/assets/user-guide-02.png)
+![Dataset list and dataset creation](../../.gitbook/assets/overview-04.png)
 
-![Dataset detail page with image cards](../../.gitbook/assets/user-guide-03.png)
+![Dataset detail page with image cards](../../.gitbook/assets/overview-02.png)
 
 Each training image should have a matching caption. TutuTrainer saves captions as `.txt` files with the same base filename as the image.
 
@@ -535,7 +535,7 @@ Windows ran out of usable memory or virtual memory. Increase system memory if po
 
 This is normal for some training processes. Minimize it and let the job continue.
 
-![Training backend console window](../../.gitbook/assets/user-guide-05.png)
+![Training backend console window](../../.gitbook/assets/overview-01.png)
 
 #### What is the difference between separated format and merged format?
 

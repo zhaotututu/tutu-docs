@@ -2,7 +2,7 @@
 
 Tutu Video Prompt Tool V2.0 is an AI video prompt expansion tool for text-to-video and image-to-video creation. It helps users turn short ideas into more complete prompts with subject, scene, camera, lighting, motion, style, and negative prompt guidance.
 
-![Tutu Video Prompt Tool main interface](../../.gitbook/assets/prompt-tool-user-guide-01.png)
+![Tutu Video Prompt Tool main interface](../../.gitbook/assets/toolbox-01.png)
 
 ![Prompt generation and library workflow](../../.gitbook/assets/prompt-tool-user-guide-02.png)
 
