@@ -69,29 +69,40 @@ TutuTrainer is not a single-model trainer. It is a general AI training platform 
 
 ### Image Generation Models
 
-| Model Family | Supported Versions | Minimum VRAM | Notes                                        |
-| ------------ | ------------------ | ------------ | -------------------------------------------- |
-| FLUX.1       | Dev / Schnell      | 24 GB        | High-end image generation models             |
-| SD1.5        | Full series        | 8 GB         | Classic lightweight Stable Diffusion         |
-| SDXL         | Base 1.0           | 16 GB        | High-quality Stable Diffusion XL             |
-| Qwen-Image   | Base               | 24 GB        | Qwen image generation                        |
-| Z-Image      | De-Turbo / Turbo   | 24 GB        | Fast image generation models                 |
-| FLUX2 Klein  | 9B / 4B            | 16 GB        | New FLUX image editing and generation models |
-| ERNIE-Image  | Baidu version      | 24 GB        | ERNIE image generation                       |
+| Model Family              | Supported Versions | VRAM Guidance | Notes                                      |
+| ------------------------- | ------------------ | ------------- | ------------------------------------------ |
+| Anima                     | Base               | 8 GB          | Lightweight image generation workflow      |
+| ERNIE-Image               | Base               | 24 GB         | ERNIE image generation                     |
+| FLUX.1                    | Dev                | 24 GB         | High-end image generation                  |
+| FLUX.2 [Klein] 4B Base    | 4B Base            | 16 GB         | FLUX.2 Klein image generation              |
+| FLUX.2 [Klein] 9B Base    | 9B Base            | 24 GB         | Larger FLUX.2 Klein image generation       |
+| Qwen-Image                | Base               | 24 GB         | Qwen image generation                      |
+| Qwen-Image-2512           | 2512               | 32 GB         | Newer Qwen image generation workflow       |
+| SD 1.5                    | Full series        | 8 GB          | Classic lightweight Stable Diffusion       |
+| SDXL                      | Base 1.0           | 16 GB         | High-quality Stable Diffusion XL           |
+| Z-Image                   | Base               | 24 GB         | Z-Image base model workflow                |
+| Z-Image De-Turbo          | De-Turbo           | 24 GB         | De-Turbo Z-Image workflow                  |
 
 ### Video Generation Models
 
-| Model Family | Supported Versions      | Minimum VRAM | Notes                                                          |
-| ------------ | ----------------------- | ------------ | -------------------------------------------------------------- |
-| Wan 2.2      | 14B / I2V-14B / TI2V-5B | 24 GB        | MOE architecture with text-to-video and image-to-video support |
-| LTX2         | 19B                     | 32 GB        | Audio-video synchronized model                                 |
+| Model Family           | Supported Versions | VRAM Guidance | Notes                                      |
+| ---------------------- | ------------------ | ------------- | ------------------------------------------ |
+| LTX-2 (Video+Audio)    | LTX-2              | 32 GB         | Video and audio training workflow          |
+| LTX-2.3 (Video+Audio)  | LTX-2.3            | 32 GB         | Newer video and audio training workflow    |
+| Wan 2.2 I2V (14B)      | 14B                | 24 GB         | Image-to-video training workflow           |
+| Wan 2.2 T2V (14B)      | 14B                | 24 GB         | Text-to-video training workflow            |
+| Wan 2.2 TI2V (5B)      | 5B                 | 16 GB         | Lighter text/image-to-video workflow       |
 
 ### Instruction and Editing Models
 
-| Model Family    | Supported Versions     | Minimum VRAM | Notes                                   |
-| --------------- | ---------------------- | ------------ | --------------------------------------- |
-| FLUX.1-Kontext  | Dev                    | 24 GB        | Context-aware editing based on FLUX     |
-| Qwen-Image-Edit | 2511 / 2509 / original | 32 GB        | Precise instruction-based image editing |
+| Model Family          | Supported Versions | VRAM Guidance | Notes                                   |
+| --------------------- | ------------------ | ------------- | --------------------------------------- |
+| FLUX.1-Kontext-dev    | Dev                | 24 GB         | Context-aware editing based on FLUX     |
+| Qwen-Image-Edit       | Original           | 32 GB         | Instruction-based image editing         |
+| Qwen-Image-Edit-2509  | 2509               | 32 GB         | Qwen image-editing workflow             |
+| Qwen-Image-Edit-2511  | 2511               | 32 GB         | Newer Qwen image-editing workflow       |
+
+VRAM guidance is practical guidance for normal use, not a hard guarantee. Actual requirements can change with dataset size, resolution, selected precision, quantization, cache settings, and other running applications.
 
 ### Dataset Format Support
 
