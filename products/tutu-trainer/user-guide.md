@@ -230,24 +230,42 @@ TutuTrainer supports three normal ways to select a base model.
 
 ### Supported Model Architectures
 
-Image model families include:
+TutuTrainer supports image generation, image editing, and video training model architectures. The model selector in your installed version is the final source of truth, but the main public model list includes the following architectures.
 
-* FLUX.1 and FLUX.1-dev.
-* FLUX.1-Kontext-dev.
-* Qwen-Image.
-* Qwen-Image-Edit, including newer edit variants when supported by the installed version.
-* Stable Diffusion 1.5.
-* Stable Diffusion XL.
-* Z-Image family.
-* FLUX2 Klein family.
-* ERNIE-Image.
+Image generation models:
 
-Video model families include:
+| Model architecture        | Practical VRAM guidance | Typical use                                  |
+| ------------------------- | ----------------------- | -------------------------------------------- |
+| Anima                     | 8 GB                    | Lightweight image generation training        |
+| ERNIE-Image               | 24 GB                   | ERNIE image generation training              |
+| FLUX.1                    | 24 GB                   | High-end image generation training           |
+| FLUX.2 [Klein] 4B Base    | 16 GB                   | Lighter FLUX.2 Klein training                |
+| FLUX.2 [Klein] 9B Base    | 24 GB                   | Larger FLUX.2 Klein training                 |
+| Qwen-Image                | 24 GB                   | Qwen image generation training               |
+| Qwen-Image-2512           | 32 GB                   | Newer Qwen image generation training         |
+| SD 1.5                    | 8 GB                    | Classic lightweight Stable Diffusion LoRA    |
+| SDXL                      | 16 GB                   | Stable Diffusion XL LoRA                     |
+| Z-Image                   | 24 GB                   | Z-Image base model training                  |
+| Z-Image De-Turbo          | 24 GB                   | Z-Image De-Turbo training                    |
 
-* Wan 2.2 T2V 14B.
-* Wan 2.2 I2V 14B.
-* Wan 2.2 TI2V 5B.
-* LTX 2 19B.
+Image editing and instruction models:
+
+| Model architecture      | Practical VRAM guidance | Typical use                         |
+| ----------------------- | ----------------------- | ----------------------------------- |
+| FLUX.1-Kontext-dev      | 24 GB                   | Context-aware FLUX image editing    |
+| Qwen-Image-Edit         | 32 GB                   | Instruction-based image editing     |
+| Qwen-Image-Edit-2509    | 32 GB                   | Qwen image editing workflow         |
+| Qwen-Image-Edit-2511    | 32 GB                   | Newer Qwen image editing workflow   |
+
+Video and audio-capable models:
+
+| Model architecture      | Practical VRAM guidance | Typical use                              |
+| ----------------------- | ----------------------- | ---------------------------------------- |
+| LTX-2 (Video+Audio)     | 32 GB                   | Video and audio training workflow        |
+| LTX-2.3 (Video+Audio)   | 32 GB                   | Newer video and audio training workflow  |
+| Wan 2.2 I2V (14B)       | 24 GB                   | Image-to-video training                  |
+| Wan 2.2 T2V (14B)       | 24 GB                   | Text-to-video training                   |
+| Wan 2.2 TI2V (5B)       | 16 GB                   | Lighter text/image-to-video training     |
 
 The exact list in your app may change by version. Use the in-app model selector as the final source of truth.
 
