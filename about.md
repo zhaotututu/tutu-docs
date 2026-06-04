@@ -1,6 +1,6 @@
 # About Zhaotutu
 
-Zhaotutu is a solo AIGC creator. The Tutu products are one-person projects built and maintained by Zhaotutu with AI-assisted development, not by a company or a large team.
+Zhaotutu is a solo AIGC creator.
 
 These tools come from real AIGC work: making models, preparing datasets, captioning images and videos, training LoRAs, testing workflows, and publishing creator content. The goal is simple: turn repeated creator pain points into practical desktop tools that normal users can actually use.
 
