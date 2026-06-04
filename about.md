@@ -98,9 +98,7 @@ The images below show public profiles, platform records, model pages, product ma
 
 ## Contact
 
-Use the official website and in-app feedback channels first.
-
-Public contact:
-
-* QQ: 331506796
-* WeChat: tujiang0411
+* **Official website:** [https://zhaotutu.xyz/](https://zhaotutu.xyz/)
+* **Bilibili:** [https://space.bilibili.com/431046154](https://space.bilibili.com/431046154)
+* **YouTube:** [https://www.youtube.com/@zhaotutu/videos](https://www.youtube.com/@zhaotutu/videos)
+* **Telegram:** [https://t.me/zhaotutu](https://t.me/zhaotutu)
