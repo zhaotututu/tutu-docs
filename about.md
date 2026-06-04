@@ -24,7 +24,7 @@ Public track record:
 * Maintains creator accounts on Bilibili, Douyin, Kuaishou, YouTube, and other platforms.
 * Has about 100,000 followers across public creator channels.
 
-This matters because the tools are not built from abstract product guesses. They are built from daily AIGC production problems: messy datasets, weak captions, model training setup, video understanding, prompt expansion, and publishing workflow friction.
+The tools are not built from abstract product guesses. They are built from daily AIGC production problems: messy datasets, weak captions, model training setup, video understanding, prompt expansion, and publishing workflow friction.
 
 ## What Zhaotutu Builds
 
