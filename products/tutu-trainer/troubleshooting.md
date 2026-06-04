@@ -1,69 +1,46 @@
 # TutuTrainer Troubleshooting
 
-This page collects common TutuTrainer issues and practical fixes.
+## Official Download
 
-## Out of Memory
+Open https://zhaotutu.xyz and choose the fully automated LoRA model trainer from the download area.
 
-If logs mention out-of-memory, the selected workflow needs more VRAM than the current device can provide.
+## 1. Log shows out of memory
 
-Try:
+The selected model or training configuration exceeds available VRAM.
 
-- Use a GPU with more VRAM.
-- Move the job to a cloud GPU.
-- Use a lighter model family.
-- Reduce dataset size or image requirements if the workflow allows it.
-- Close other GPU-heavy applications before training.
+Recommended actions:
 
-Large models such as FLUX, SDXL, Qwen-Image, Z-Image, FLUX2, ERNIE-Image, and video-related models can require much more memory than SD1.5-style workflows.
+1. Use a cloud GPU workflow if local VRAM is not enough.
+2. Choose a smaller model architecture.
+3. Reduce dataset size, especially for editing models.
+4. Close other GPU-heavy applications before training.
 
-## FLUX2 K Models Report Split Files
+Cloud GPU entry referenced in the source document:
 
-Some FLUX2 K workflows require merged ComfyUI-style model files instead of older split-file layouts.
+https://lincore.wuying.aliyun.com/?spm=5176.43105039.J_vUIfvN494LRvoTKxXOP77.2.31063b3fwIRAvU#/
 
-If you used an older release that downloaded split files, remove the old FLUX2 K model folder and download the model again from the current workflow.
+## 2. FLUX2 K series reports separated files
 
-## Dataset Folder Exists but Does Not Appear
+FLUX2 K series training requires a merged model format, commonly the ComfyUI-style merged format.
 
-The most common cause is a path mismatch.
+Older versions used separated files. Because the model files were too large and inconvenient for users, the current workflow changed to merged format. If you used an older version, delete the old FLUX2 K model folder and download the current model again.
 
-Check:
+## 3. Dataset is in the folder but does not appear in the app
 
-- The dataset root configured in path settings.
-- Whether your dataset is inside the selected dataset root.
-- Whether the dataset folder contains supported image files.
-- Whether the application needs to be refreshed or restarted after path changes.
+After opening the app, first check whether the configured path is correct. The path may not be pointing to the folder you think it is pointing to. Set the correct dataset path in the app and refresh the list.
 
-## Model Format Conversion Fails
+## 4. Format conversion always fails
 
-Format conversion requires the correct model files and sometimes additional components such as VAE files. Some SDXL models include VAE data inside the base model, while others expect external files.
+Format conversion requires the correct VAE and related files. Current conversion support is mainly for SDXL and SD1.5, and conversion may require network access.
 
-General checks:
+Many SDXL base models already include VAE-related content, so confirm the model type before conversion.
 
-- Confirm the source model type.
-- Confirm the target conversion type is supported by your installed version.
-- Confirm required VAE or companion files are configured.
-- Keep network access available if the conversion needs to download configuration files.
+## 5. Training has no error but stays at 0, or training time is extremely long
 
-At the time of the source documentation, conversion was mainly described for SDXL and SD1.5-style workflows.
+This is usually caused by insufficient resources. Try a different model for training, or reduce dataset size for editing models.
 
-## Training Stays at 0 Percent or Takes Too Long
+It may also be caused by dataset naming. Do not name dataset folders directly as `1`, `2`, `3`. Names like `01`, `02`, `03` are better. The safest option is simple English letters plus numbers, such as `work01` or `work02`.
 
-Some jobs take time before visible progress appears. Larger models and larger datasets can be slow.
+## 6. Why are there so many steps? Why is training longer than other trainers?
 
-Check:
-
-- GPU usage.
-- Job logs.
-- Dataset size.
-- Selected model family.
-- Output and cache paths.
-
-If the model already appears fitted before the planned maximum steps, you can stop early and test the output, depending on the workflow and your goal.
-
-## Too Many Steps
-
-The recommended step count is calculated conservatively. You do not always need to complete every planned step. If samples already look good and no longer improve, stop and test the current output.
-
-## Installer or Runtime Prompts
-
-If Windows asks for WebView2 Runtime, install it and restart the application. Use official Microsoft or bundled runtime sources only.
+The step count is calculated according to an upper-bound estimate. It does not mean the task must always finish every step. If the result has already fitted well enough, you can stop early and test the output.

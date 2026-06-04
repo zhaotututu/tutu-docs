@@ -1,29 +1,35 @@
 # Tutu AIGC Toolbox Overview
 
-Tutu AIGC Toolbox is the broader public product family around Zhaotutu's AIGC tools. It includes software and workflows for dataset preparation, captioning, model training, video understanding, prompt expansion, and creator productivity.
+Tutu AIGC Toolbox is the public product and resource family around Zhaotutu's AIGC tools. It brings together utilities for captioning, dataset preparation, LoRA training, video prompt expansion, video publishing workflows, code backup, models, workflows, and learning resources.
 
 Official website: https://zhaotutu.xyz
 
-## Public Tool Areas
+## Product Family
 
-## Tutu Super Smart Tagger
+### Tutu Super Smart Tagger
 
-An AI creation and material organization workspace. It focuses on:
+Tutu Super Smart Tagger is an AI creation and material organization workspace.
+
+It is useful for:
 
 - Image prompt reverse captioning.
-- Natural-language descriptions.
-- Paired image descriptions.
+- Natural-language image descriptions.
+- Paired image descriptions for LoRA training.
 - Batch captioning.
 - Video understanding.
 - Scene descriptions.
 - Summaries.
 - Spoken-script notes.
-- Element editing.
-- Default AI and custom model configuration.
+- Element editing with local models.
+- Default AI, external API, and local model workflows.
 
-## TutuTrainer
+The V1.1.7 release added account login, account center, credits, subscription and device authorization visibility, invitation codes, transaction records, stronger default AI coverage, better video batch processing, online-video import, manual element selection, task-style model downloads, and language or theme system-following behavior.
 
-A desktop LoRA training assistant. It focuses on:
+### TutuTrainer
+
+TutuTrainer is a Windows application for LoRA model training and model workflow management.
+
+It is useful for:
 
 - Dataset management.
 - Base model management.
@@ -31,36 +37,89 @@ A desktop LoRA training assistant. It focuses on:
 - Training job management.
 - Automatic parameter recommendations.
 - Sampling, logs, and output management.
+- Image and video model training workflows supported by the installed version.
 
-## Tutu Video Publisher
+### Tutu Video Publisher
 
-A workflow tool for video publishing tasks, account management, publishing plans, dashboards, and AI-assisted analysis.
+Tutu Video Publisher is a video publishing workflow assistant for platform accounts, publishing plans, dashboards, AI-assisted title and cover generation, and local API automation.
 
-## Tutu Video Prompt Tool
+It is useful for:
 
-A prompt expansion tool for text-to-video and image-to-video creation. It helps turn short ideas into richer prompts with motion, camera, lighting, and style details.
+- Managing multiple platform accounts.
+- Scheduling videos.
+- Generating platform-specific titles, descriptions, tags, and covers.
+- Monitoring publish state.
+- Controlling workflows through the local REST API while the app is running.
 
-## Recommended Combined Workflow
+### Tutu Video Prompt Tool
 
-For image LoRA creation:
+Tutu Video Prompt Tool V2.0 expands short ideas into richer prompts for text-to-video and image-to-video generation.
 
-1. Use Tutu Super Smart Tagger to caption and clean image datasets.
+![Tutu Video Prompt Tool interface](../../assets/tutu-aigc-toolbox/source/toolbox-01.png)
+
+It is useful for:
+
+- Text-to-video prompt expansion.
+- Image-to-video prompt expansion.
+- Camera, lighting, motion, scene, and style enrichment.
+- Prompt history and library management.
+- Custom templates and default negative prompts.
+- Chinese and English interface switching.
+
+### TuTu's Code Ark
+
+TuTu's Code Ark is a free open-source automatic Git and GitHub backup tool designed for AI-assisted coding beginners and independent developers.
+
+It is useful for:
+
+- Automatic local Git initialization.
+- Automatic remote repository creation.
+- Interval or scheduled backup.
+- Tray-based background operation.
+- File-risk scanning before push.
+- Real-time logs.
+- Chinese and English interface support.
+
+See [TuTu's Code Ark](code-ark.md) for the full public guide.
+
+## Recommended Combined Workflows
+
+### Image LoRA Creation
+
+1. Use Tutu Super Smart Tagger to caption and clean images.
 2. Use TutuTrainer to train the LoRA.
-3. Test results and revise captions or dataset composition if needed.
+3. Test checkpoints.
+4. Revise captions or dataset composition if needed.
 
-For video creators:
+### Video Creator Workflow
 
 1. Use Tutu Video Prompt Tool to expand video prompts.
-2. Use Tutu Super Smart Tagger to analyze or organize video materials.
-3. Use Tutu Video Publisher to manage posting workflows where supported.
+2. Use Tutu Super Smart Tagger to analyze, summarize, or organize video material.
+3. Use Tutu Video Publisher to schedule and publish videos where supported.
 
-## Download and Updates
+### AI Coding Backup Workflow
 
-Use https://zhaotutu.xyz for public download entry points and update information. Avoid unofficial repackaged installers or modified scripts.
+1. Use your preferred coding tool to create the project.
+2. Use TuTu's Code Ark to initialize or connect the project.
+3. Configure interval or scheduled backup.
+4. Let the app keep your code backed up while you focus on development.
 
-## Security Notes
+## Public Resources
 
+Zhaotutu also publishes public models, workflows, and AIGC learning resources.
+
+See [AIGC Resources](resources.md) for public resource links and notes.
+
+## Download and Safety
+
+Use the official website or official channel announced by Zhaotutu:
+
+https://zhaotutu.xyz
+
+Safety reminders:
+
+- Avoid unofficial installers and repackaged archives.
 - Keep API keys private.
-- Keep platform session cookies and tokens private.
-- Use official installers.
-- Review AI-generated captions, summaries, and prompts before using them in public work.
+- Keep platform cookies and access tokens private.
+- Review AI-generated captions, summaries, titles, covers, and prompts before using them publicly.
+- For platform automation tools, follow each platform's rules and local laws.

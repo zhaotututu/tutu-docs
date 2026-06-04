@@ -1,121 +1,49 @@
 # Tutu Super Smart Tagger User Guide
 
-This guide covers the main user-facing workflows in Tutu Super Smart Tagger.
+This is the full public user guide for Tutu Super Smart Tagger. It is organized by workflow so that new users can follow the quick start first, while experienced users can jump directly to the feature area they need.
 
-## First Run and Account
+The guide covers account setup, credits, project management, image prompt reverse captioning, video reverse prompt workflows, batch processing, model configuration, system settings, and troubleshooting.
 
-After installation, open the application from the desktop or Start menu.
+## Recommended Reading Order
 
-The current workflow starts with login or registration:
+1. [Quick Start](quick-start.md)
+2. [Account, Credits, and Authorization](user-guide/accounts-credits-authorization.md)
+3. [Project Management](user-guide/project-management.md)
+4. [Image Prompt Reverse Captioning](user-guide/image-reverse-prompts.md)
+5. [Video Prompt Reverse Captioning](user-guide/video-reverse-prompts.md)
+6. [Video Detail Page](user-guide/video-detail-page.md)
+7. [Batch Processing](user-guide/batch-processing.md)
+8. [Creative Workshop](user-guide/creative-workshop.md)
+9. [AI Lab](user-guide/ai-lab.md)
+10. [Model Settings](user-guide/model-settings.md)
+11. [Other Settings](user-guide/other-settings.md)
+12. [Top Bar, Status Bar, and Account Entry](user-guide/top-and-status-bars.md)
+13. [Troubleshooting](user-guide/troubleshooting.md)
 
-- Existing users can log in directly.
-- New users can register with email verification.
-- After login, the account page shows credits, subscription information, device authorization, activation state, invitation information, and transaction records.
+## How This Guide Is Structured
 
-Older activation-code flows may still appear in historical documents, but the current public guidance is to use the account page inside the official application.
+Each chapter focuses on one area of the app:
 
-## Default AI
+- What the page or feature is used for.
+- Where to find it in the interface.
+- The normal operating steps.
+- What each major button or status means.
+- How generated data is saved or exported.
+- Common mistakes and recovery paths.
 
-The default AI is intended for users who want to start immediately without configuring their own model provider.
+The screenshots are migrated from the original Chinese public guide. They are kept here so that users can understand the layout and operation flow. When English-interface screenshots are available, they can replace the existing images without changing the document structure.
 
-It can be used for:
+## Current User-Friendly Path
 
-- Image prompt reverse captioning.
-- Natural-language descriptions.
-- Paired image descriptions.
-- Video understanding.
+New users should normally start with the default AI workflow:
 
-Successful default-AI requests may consume credits depending on the product rules shown in the app. Failed requests or missing results should not be treated as successful output.
+1. Install and open the app.
+2. Log in or register a Tutu account.
+3. Buy a small credit package for testing.
+4. Create a project.
+5. Import images or videos.
+6. Generate captions or descriptions.
+7. Review the results.
+8. Export the dataset.
 
-## Model Configuration
-
-Advanced users can configure:
-
-- External model APIs.
-- Local models.
-- Custom compatible endpoints.
-- API keys from supported providers.
-
-Keep API keys private. Do not publish them in screenshots, logs, shared documents, or support messages.
-
-## Image Prompt Workflow
-
-Use this workflow when you want prompt-style tags for training or generation.
-
-1. Create or open an image project.
-2. Import images.
-3. Choose prompt-phrase generation.
-4. Run batch generation.
-5. Review tags.
-6. Remove wrong, duplicated, or misleading tags.
-7. Export the final captions.
-
-## Natural-Language Caption Workflow
-
-Use this workflow when the training model benefits from full-sentence captions.
-
-1. Import images.
-2. Choose natural-language description.
-3. Generate descriptions.
-4. Review descriptions for visual accuracy.
-5. Edit any hallucinated or missing details.
-6. Export captions.
-
-Good captions describe what is visible. Avoid adding details that are not in the image unless you intentionally need a training trigger.
-
-## Paired Image Description Workflow
-
-Use paired descriptions for image editing datasets where each item has a source image and a result image.
-
-1. Prepare source/result image pairs.
-2. Import or organize the pairs in the project.
-3. Use paired reverse captioning.
-4. Review the generated transformation description.
-5. Export the paired dataset.
-
-This is useful for workflows that need descriptions of how one image changes into another.
-
-## Batch Processing
-
-Batch processing helps process many images or videos at once.
-
-Before running a large batch:
-
-- Test on a small subset.
-- Confirm the model and mode are correct.
-- Confirm enough credits or local resources are available.
-- Keep the application open until the batch completes.
-
-## Video Workflows
-
-The video area can process local videos and supported online video links.
-
-Possible outputs include:
-
-- Scene descriptions.
-- Video summaries.
-- Spoken-script notes.
-- Batch reverse captioning results.
-
-After generation, review the output because video understanding can miss fast cuts, small text, or ambiguous scenes.
-
-## Element Editor
-
-The element editor supports automatic recognition and manual selection. It is useful when you need to identify or work around repeated elements such as:
-
-- Watermarks.
-- Subtitles.
-- Logos.
-- Fixed screen regions.
-
-Use manual selection when automatic detection is not precise enough.
-
-## Export
-
-Export generated data after review. Choose the format that matches your downstream workflow. For LoRA training, keep captions aligned with image file names and dataset folders.
-
-## Update and Language
-
-The application may support system-language following and manual language selection. It also includes clearer update feedback and task-style model downloads in current versions.
-
-Use the official website for installers and update packages.
+Advanced model configuration is only needed when you want to use your own API key, a custom model provider, a local model, or GPU-based local processing.
