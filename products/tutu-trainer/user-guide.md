@@ -71,7 +71,7 @@ image001.jpg
 image001.txt
 ```
 
-For batch captioning, use Tutu Super Smart Tagger to generate and review captions before training.
+For batch captioning, use Intelligent Image & Video Prompt Reverse Engineer to generate and review captions before training.
 
 ### Step 3: Configure and Start Training
 
@@ -89,7 +89,15 @@ TutuTrainer calculates recommended training settings automatically based on the 
 
 During training, watch the job progress, resource usage, samples, and logs.
 
-![Training progress and job dashboard](../../.gitbook/assets/user-guide-04.png)
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+
+
 
 When the run is complete:
 
